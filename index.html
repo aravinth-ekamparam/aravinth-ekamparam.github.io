@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Aravinth Ekamparam, PhD | Research Portfolio</title>
+  <meta name="description" content="Research Scientist at Detoxyfi Technologies specializing in Environmental Geochemistry, Groundwater Quality, Managed Aquifer Recharge (MAR), and Water Treatment.">
+  
+  <!-- Open Graph & Schema -->
+  <meta property="og:title" content="Dr. Aravinth Ekamparam, PhD - Research Scientist">
+  <meta property="og:description" content="Portfolio & Academic Profile of Dr. Aravinth Ekamparam">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Fonts: Manrope (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0067B8',
+            secondary: '#20BFEA',
+            bgLight: '#F8FBFD',
+            darkText: '#183153',
+            accent: '#27C2E2',
+            cardLight: '#FFFFFF',
+            darkBg: '#0B132B',
+            darkCard: '#1C2541',
+          },
+          fontFamily: {
+            heading: ['Manrope', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 10px 30px -10px rgba(0, 103, 184, 0.08)',
+            glow: '0 0 25px rgba(32, 191, 234, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, .font-heading { font-family: 'Manrope', sans-serif; }
+    .floating { animation: float 6s ease-in-out infinite; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #F8FBFD; }
+    .dark ::-webkit-scrollbar-track { background: #0B132B; }
+    ::-webkit-scrollbar-thumb { background: #20BFEA; border-radius: 4px; }
+  </style>
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dr. Aravinth Ekamparam",
+    "honorificSuffix": "PhD",
+    "jobTitle": "Research Scientist",
+    "worksFor": { "@type": "Organization", "name": "Detoxyfi Technologies" },
+    "email": "aravinth.e@detoxyfi.com",
+    "telephone": "+918903656204",
+    "sameAs": [
+      "https://www.linkedin.com/in/aravinthekamparam/",
+      "https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en"
+    ]
+  }
+  </script>
+</head>
+<body class="bg-bgLight dark:bg-darkBg text-darkText dark:text-gray-200 transition-colors duration-300">
+
+  <!-- Scroll Progress Bar -->
+  <div class="fixed top-0 left-0 w-full h-1 bg-transparent z-[100]">
+    <div id="scrollProgress" class="h-full bg-gradient-to-r from-primary via-secondary to-accent w-0 transition-all duration-150"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 bg-transparent">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <a href="#home" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-full bg-primary text-white font-heading font-bold flex items-center justify-center text-lg shadow-sm">AE</div>
+        <div>
+          <span class="font-heading font-bold text-base block leading-tight text-darkText dark:text-white">Dr. Aravinth Ekamparam</span>
+          <span class="text-xs text-gray-500 dark:text-gray-400">Research Scientist • Detoxyfi</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+        <a href="#about" class="hover:text-primary dark:hover:text-secondary transition">About</a>
+        <a href="#research" class="hover:text-primary dark:hover:text-secondary transition">Research</a>
+        <a href="#publications" class="hover:text-primary dark:hover:text-secondary transition">Publications</a>
+        <a href="#projects" class="hover:text-primary dark:hover:text-secondary transition">Projects</a>
+        <a href="#experience" class="hover:text-primary dark:hover:text-secondary transition">Experience</a>
+        <a href="#awards" class="hover:text-primary dark:hover:text-secondary transition">Awards</a>
+        <a href="#contact" class="hover:text-primary dark:hover:text-secondary transition">Contact</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center space-x-4">
+        <button id="darkToggle" aria-label="Toggle Theme" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+          <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+          <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-amber-400"></i>
+        </button>
+        <a href="cv.pdf" download class="bg-primary hover:bg-primary/90 text-white text-xs font-semibold px-4 py-2.5 rounded-full flex items-center space-x-2 shadow-sm transition hover:shadow-glow">
+          <i data-lucide="file-text" class="w-4 h-4"></i>
+          <span>Download CV</span>
+        </a>
+      </div>
+
+      <!-- Mobile Controls -->
+      <div class="lg:hidden flex items-center space-x-2">
+        <button id="darkToggleMobile" aria-label="Toggle Theme" class="p-2 text-darkText dark:text-white">
+          <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+          <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-amber-400"></i>
+        </button>
+        <button id="mobileMenuBtn" aria-label="Open Menu" class="p-2 text-darkText dark:text-white">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileDrawer" class="hidden lg:hidden bg-white/95 dark:bg-darkCard/95 border-b border-gray-200 dark:border-gray-800 px-6 py-4 space-y-3">
+      <a href="#about" class="block py-2 border-b border-gray-100 dark:border-gray-800">About</a>
+      <a href="#research" class="block py-2 border-b border-gray-100 dark:border-gray-800">Research</a>
+      <a href="#publications" class="block py-2 border-b border-gray-100 dark:border-gray-800">Publications</a>
+      <a href="#projects" class="block py-2 border-b border-gray-100 dark:border-gray-800">Projects</a>
+      <a href="#experience" class="block py-2 border-b border-gray-100 dark:border-gray-800">Experience</a>
+      <a href="#contact" class="block py-2">Contact</a>
+      <a href="cv.pdf" download class="w-full bg-primary text-white text-center text-xs font-semibold py-3 rounded-full flex justify-center items-center space-x-2">
+        <i data-lucide="file-text" class="w-4 h-4"></i>
+        <span>Download CV</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
+    <!-- Water Wave Canvas Background -->
+    <canvas id="waterCanvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-60"></canvas>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Profile Visual -->
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="relative">
+          <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-primary to-secondary opacity-30 blur-xl animate-pulse"></div>
+          <div class="floating relative w-64 h-64 sm:w-80 sm:h-80 rounded-full p-2 bg-white dark:bg-darkCard shadow-2xl border border-gray-100 dark:border-gray-800">
+            <div class="w-full h-full rounded-full bg-gradient-to-br from-primary/10 via-secondary/10 to-gray-100 dark:to-gray-900 flex flex-col items-center justify-center text-center p-6 border border-dashed border-primary/30">
+              <div class="w-20 h-20 rounded-full bg-primary text-white flex items-center justify-center font-heading font-bold text-2xl mb-3 shadow-md">
+                AE
+              </div>
+              <h2 class="font-heading font-bold text-lg text-darkText dark:text-white">Dr. Aravinth Ekamparam</h2>
+              <p class="text-xs text-secondary font-medium mt-0.5">PhD • Research Scientist</p>
+              <p class="text-[11px] text-gray-500 dark:text-gray-400 mt-1">Detoxyfi Technologies</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold">
+          <span class="w-2 h-2 rounded-full bg-accent animate-ping"></span>
+          <span>Research Scientist at Detoxyfi Technologies</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-darkText dark:text-white tracking-tight leading-tight">
+          Dr. Aravinth Ekamparam, <span class="text-primary font-light">PhD</span>
+        </h1>
+
+        <div class="text-lg sm:text-2xl text-gray-600 dark:text-gray-300 font-medium h-8">
+          Focus: <span id="typingText" class="text-secondary font-semibold"></span><span class="animate-pulse border-r-2 border-secondary ml-1"></span>
+        </div>
+
+        <p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl">
+          Pioneering hydrogeochemical diagnostics, subsurface reactive transport modeling, and managed aquifer recharge (MAR) frameworks for global water security.
+        </p>
+
+        <div class="pt-4 flex flex-wrap gap-4 justify-center lg:justify-start">
+          <a href="cv.pdf" download class="bg-primary hover:bg-primary/90 text-white text-sm font-medium px-6 py-3 rounded-full shadow-md hover:shadow-glow transition flex items-center space-x-2">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+            <span>Download CV</span>
+          </a>
+          <a href="#contact" class="bg-white dark:bg-darkCard text-darkText dark:text-white border border-gray-200 dark:border-gray-700 hover:border-primary text-sm font-medium px-6 py-3 rounded-full shadow-sm transition flex items-center space-x-2">
+            <i data-lucide="mail" class="w-4 h-4 text-primary"></i>
+            <span>Contact</span>
+          </a>
+          <a href="https://www.linkedin.com/in/aravinthekamparam/" target="_blank" aria-label="LinkedIn" class="p-3 bg-white dark:bg-darkCard border border-gray-200 dark:border-gray-700 rounded-full text-gray-600 dark:text-gray-300 hover:text-primary transition">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+          </a>
+          <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" aria-label="Google Scholar" class="p-3 bg-white dark:bg-darkCard border border-gray-200 dark:border-gray-700 rounded-full text-gray-600 dark:text-gray-300 hover:text-primary transition">
+            <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Statistics -->
+  <section id="about" class="py-20 bg-white dark:bg-darkCard/50 border-y border-gray-100 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-6">
+          <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-semibold uppercase tracking-wider">Academic & Professional Profile</span>
+          <h2 class="text-3xl font-bold font-heading text-darkText dark:text-white">Advancing Hydrogeochemistry & Water Purification</h2>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
+            Dr. Aravinth Ekamparam is a Research Scientist at Detoxyfi Technologies specializing in Environmental Geochemistry, Groundwater Quality, and Sustainable Managed Aquifer Recharge (MAR).
+          </p>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
+            His career bridges fundamental geochemical thermodynamic modeling with scalable field engineering—focusing on fluoride/arsenic remediation, biochar adsorbent matrices, and real-time groundwater telemetry.
+          </p>
+        </div>
+
+        <!-- 4 Statistics Cards -->
+        <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+          <div class="p-6 rounded-2xl bg-bgLight dark:bg-darkBg border border-gray-100 dark:border-gray-800 text-center shadow-soft">
+            <div class="text-3xl sm:text-4xl font-extrabold font-heading text-primary dark:text-secondary">10+</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400 mt-2 font-medium">Years Experience</div>
+          </div>
+          <div class="p-6 rounded-2xl bg-bgLight dark:bg-darkBg border border-gray-100 dark:border-gray-800 text-center shadow-soft">
+            <div class="text-3xl sm:text-4xl font-extrabold font-heading text-primary dark:text-secondary">30+</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400 mt-2 font-medium">Research Publications</div>
+          </div>
+          <div class="p-6 rounded-2xl bg-bgLight dark:bg-darkBg border border-gray-100 dark:border-gray-800 text-center shadow-soft">
+            <div class="text-3xl sm:text-4xl font-extrabold font-heading text-primary dark:text-secondary">8+</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400 mt-2 font-medium">Research Projects</div>
+          </div>
+          <div class="p-6 rounded-2xl bg-bgLight dark:bg-darkBg border border-gray-100 dark:border-gray-800 text-center shadow-soft">
+            <div class="text-3xl sm:text-4xl font-extrabold font-heading text-primary dark:text-secondary">1000+</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400 mt-2 font-medium">Google Scholar Citations</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Areas (6 Cards) -->
+  <section id="research" class="py-24 bg-bgLight dark:bg-darkBg">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider">Specializations</span>
+        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-darkText dark:text-white">Primary Research Vectors</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="p-8 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/50 transition-all transform hover:-translate-y-1 group">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition">
+            <i data-lucide="flask-conical" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold font-heading text-darkText dark:text-white mb-3">Environmental Geochemistry</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Reaction kinetics, mineral dissolution, and hydrogeochemical pathways dictating aquifer chemistry.</p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/50 transition-all transform hover:-translate-y-1 group">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition">
+            <i data-lucide="droplets" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold font-heading text-darkText dark:text-white mb-3">Groundwater Quality</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Assessment and predictive spatial modeling of Fluoride, Arsenic, and Heavy Metals occurrence.</p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/50 transition-all transform hover:-translate-y-1 group">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition">
+            <i data-lucide="waves" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold font-heading text-darkText dark:text-white mb-3">Managed Aquifer Recharge</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Designing infiltration drywells and recharge structures for long-term climate resilience.</p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/50 transition-all transform hover:-translate-y-1 group">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition">
+            <i data-lucide="filter" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold font-heading text-darkText dark:text-white mb-3">Water Treatment</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Low-cost functionalized adsorbents and filtration beds for decentralized drinking water purification.</p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/50 transition-all transform hover:-translate-y-1 group">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition">
+            <i data-lucide="layers" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold font-heading text-darkText dark:text-white mb-3">Membrane Technologies</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Foulant deposition, pretreatment parameter optimization, and high-recovery desalination design.</p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/50 transition-all transform hover:-translate-y-1 group">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition">
+            <i data-lucide="activity" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold font-heading text-darkText dark:text-white mb-3">Contaminant Fate & Transport</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Numerical simulation of porous media pollutant migration and geochemical attenuation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications (Search & Filter) -->
+  <section id="publications" class="py-24 bg-white dark:bg-darkCard/30 border-t border-gray-100 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-semibold uppercase tracking-wider">Publications</span>
+        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-darkText dark:text-white">Featured Journal Papers</h2>
+      </div>
+
+      <!-- Search & Filter Controls -->
+      <div class="mb-10 max-w-4xl mx-auto flex flex-col md:flex-row gap-4 justify-between items-center">
+        <div class="relative w-full md:w-80">
+          <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-3.5 text-gray-400"></i>
+          <input type="text" id="pubSearch" placeholder="Search title, journal, author..." class="w-full pl-10 pr-4 py-2.5 rounded-full border border-gray-200 dark:border-gray-700 bg-bgLight dark:bg-darkBg text-sm focus:outline-none focus:border-primary text-darkText dark:text-white">
+        </div>
+        <div class="flex flex-wrap justify-center gap-2" id="pubFilterBtns">
+          <button data-cat="All" class="filter-btn active text-xs font-semibold px-4 py-2 rounded-full bg-primary text-white">All</button>
+          <button data-cat="Groundwater" class="filter-btn text-xs font-semibold px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Groundwater</button>
+          <button data-cat="MAR" class="filter-btn text-xs font-semibold px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">MAR</button>
+          <button data-cat="Water Treatment" class="filter-btn text-xs font-semibold px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Water Treatment</button>
+        </div>
+      </div>
+
+      <!-- Publications List -->
+      <div class="space-y-6 max-w-4xl mx-auto" id="pubContainer">
+        <div class="pub-card p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft flex flex-col md:flex-row md:items-center justify-between gap-6" data-category="Groundwater" data-text="hydrogeochemical characterization contaminant migration journal of hydrology ekamparam ramanathan">
+          <div class="space-y-2">
+            <div class="flex items-center space-x-3">
+              <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[11px] font-bold">2023</span>
+              <span class="text-xs font-semibold text-secondary uppercase">Journal of Hydrology</span>
+            </div>
+            <h3 class="text-lg font-bold font-heading text-darkText dark:text-white">Hydrogeochemical characterization and contaminant migration dynamics in deep aquifer systems</h3>
+            <p class="text-xs text-gray-500">Ekamparam, A., Ramanathan, AL., Kumar, M.</p>
+          </div>
+          <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" class="shrink-0 text-xs font-medium text-primary hover:text-secondary bg-white dark:bg-darkBg px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center space-x-2">
+            <i data-lucide="book-open" class="w-4 h-4"></i>
+            <span>Read Paper</span>
+          </a>
+        </div>
+
+        <div class="pub-card p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft flex flex-col md:flex-row md:items-center justify-between gap-6" data-category="MAR" data-text="managed aquifer recharge techniques fluoride mitigation water research ekamparam srinivasan pradeep">
+          <div class="space-y-2">
+            <div class="flex items-center space-x-3">
+              <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[11px] font-bold">2022</span>
+              <span class="text-xs font-semibold text-secondary uppercase">Water Research</span>
+            </div>
+            <h3 class="text-lg font-bold font-heading text-darkText dark:text-white">Managed aquifer recharge techniques for fluoride mitigation in semi-arid hard rock regions</h3>
+            <p class="text-xs text-gray-500">Ekamparam, A., Srinivasan, R., Pradeep, T.</p>
+          </div>
+          <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" class="shrink-0 text-xs font-medium text-primary hover:text-secondary bg-white dark:bg-darkBg px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center space-x-2">
+            <i data-lucide="book-open" class="w-4 h-4"></i>
+            <span>Read Paper</span>
+          </a>
+        </div>
+
+        <div class="pub-card p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft flex flex-col md:flex-row md:items-center justify-between gap-6" data-category="Water Treatment" data-text="biochar matrix integration heavy metal attenuation environmental science technology ekamparam">
+          <div class="space-y-2">
+            <div class="flex items-center space-x-3">
+              <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[11px] font-bold">2021</span>
+              <span class="text-xs font-semibold text-secondary uppercase">Environmental Science & Technology</span>
+            </div>
+            <h3 class="text-lg font-bold font-heading text-darkText dark:text-white">Novel biochar matrix integration for decentralized heavy metal attenuation in municipal stormwater</h3>
+            <p class="text-xs text-gray-500">Ekamparam, A., Johnson, S., Narayanan, M.</p>
+          </div>
+          <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" class="shrink-0 text-xs font-medium text-primary hover:text-secondary bg-white dark:bg-darkBg px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center space-x-2">
+            <i data-lucide="book-open" class="w-4 h-4"></i>
+            <span>Read Paper</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Applied Projects -->
+  <section id="projects" class="py-24 bg-bgLight dark:bg-darkBg">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider">Engineering Solutions</span>
+        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-darkText dark:text-white">Applied Research Projects</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 overflow-hidden shadow-soft flex flex-col">
+          <div class="h-40 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center p-6 border-b border-gray-100 dark:border-gray-800">
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Drywell MAR System</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-[10px] font-bold text-secondary uppercase">Water Recharge</span>
+              <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">Drywell MAR Filtration Infrastructure</h3>
+              <p class="text-xs text-gray-600 dark:text-gray-300 mt-2">Subsurface recharge wells designed to capture urban runoff while filtering suspended solids and bio-contaminants.</p>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">Hydrogeology</span>
+              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">Infiltration</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 overflow-hidden shadow-soft flex flex-col">
+          <div class="h-40 bg-gradient-to-br from-secondary/10 to-accent/10 flex items-center justify-center p-6 border-b border-gray-100 dark:border-gray-800">
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Agrivoltaics & Water</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-[10px] font-bold text-secondary uppercase">Agri-Tech</span>
+              <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">Agrivoltaics Water Efficiency Network</h3>
+              <p class="text-xs text-gray-600 dark:text-gray-300 mt-2">Integrating solar panel rainwater harvesting with automated soil moisture regulation systems.</p>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">Soil Physics</span>
+              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">Automation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 overflow-hidden shadow-soft flex flex-col">
+          <div class="h-40 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center p-6 border-b border-gray-100 dark:border-gray-800">
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Pretreatment Filters</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-[10px] font-bold text-secondary uppercase">Pretreatment</span>
+              <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">Advanced Pretreatment Filter Units</h3>
+              <p class="text-xs text-gray-600 dark:text-gray-300 mt-2">Physical filtration media designed to prevent foulant build-up on downstream RO membrane modules.</p>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">Fluid Dynamics</span>
+              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">Turbidity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career Experience Timeline -->
+  <section id="experience" class="py-24 bg-white dark:bg-darkCard/30 border-t border-gray-100 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-semibold uppercase tracking-wider">Career Journey</span>
+        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-darkText dark:text-white">Experience Timeline</h2>
+      </div>
+
+      <div class="relative max-w-4xl mx-auto">
+        <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-800 -translate-x-1/2"></div>
+        <div class="space-y-12">
+
+          <!-- Item 1 -->
+          <div class="relative flex flex-col md:flex-row items-start">
+            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 z-10 w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center border-4 border-white dark:border-darkBg shadow">
+              <i data-lucide="briefcase" class="w-4 h-4"></i>
+            </div>
+            <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8 w-full">
+              <div class="p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft">
+                <span class="text-xs font-bold text-primary uppercase">Detoxyfi Technologies</span>
+                <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">Research Scientist</h3>
+                <span class="text-[11px] text-gray-500 block mb-3">2023 - Present</span>
+                <p class="text-xs text-gray-600 dark:text-gray-300">Leading R&D on novel adsorbent matrices, field-deployable MAR units, and geochemical diagnostics.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="relative flex flex-col md:flex-row items-start md:flex-row-reverse">
+            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 z-10 w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center border-4 border-white dark:border-darkBg shadow">
+              <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+            </div>
+            <div class="ml-12 md:ml-0 md:w-1/2 md:pl-8 w-full">
+              <div class="p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft">
+                <span class="text-xs font-bold text-primary uppercase">Oregon State University</span>
+                <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">Postdoctoral Research Associate</h3>
+                <span class="text-[11px] text-gray-500 block mb-3">2021 - 2023 • Corvallis, OR, USA</span>
+                <p class="text-xs text-gray-600 dark:text-gray-300">Researched reactive transport of organic contaminants in subsurface groundwater bodies.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="relative flex flex-col md:flex-row items-start">
+            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 z-10 w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center border-4 border-white dark:border-darkBg shadow">
+              <i data-lucide="award" class="w-4 h-4"></i>
+            </div>
+            <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8 w-full">
+              <div class="p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft">
+                <span class="text-xs font-bold text-primary uppercase">IIT Madras</span>
+                <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">PhD Scholar & SRF</h3>
+                <span class="text-[11px] text-gray-500 block mb-3">2016 - 2021 • Chennai, India</span>
+                <p class="text-xs text-gray-600 dark:text-gray-300">Doctoral dissertation on Environmental Geochemistry and Groundwater Fluoride Speciation.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & vCard Section -->
+  <section id="contact" class="py-24 bg-bgLight dark:bg-darkBg">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider">Collaboration</span>
+        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-darkText dark:text-white">Get In Touch</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
+        <!-- Direct Contacts -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="p-8 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft space-y-6">
+            <h3 class="text-lg font-bold font-heading text-darkText dark:text-white">Contact Info</h3>
+            
+            <div class="space-y-4 text-xs font-medium">
+              <a href="mailto:aravinth.e@detoxyfi.com" class="flex items-center space-x-3 text-gray-600 dark:text-gray-300 hover:text-primary">
+                <i data-lucide="mail" class="w-4 h-4 text-primary shrink-0"></i>
+                <span>aravinth.e@detoxyfi.com</span>
+              </a>
+              <a href="tel:+918903656204" class="flex items-center space-x-3 text-gray-600 dark:text-gray-300 hover:text-primary">
+                <i data-lucide="phone" class="w-4 h-4 text-primary shrink-0"></i>
+                <span>+91 89036 56204</span>
+              </a>
+              <div class="flex items-center space-x-3 text-gray-600 dark:text-gray-300">
+                <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0"></i>
+                <span>Detoxyfi Technologies, India</span>
+              </div>
+            </div>
+
+            <div class="pt-2 flex flex-col gap-3">
+              <button id="downloadVCard" class="w-full bg-primary hover:bg-primary/90 text-white text-xs font-semibold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
+                <i data-lucide="download" class="w-4 h-4"></i>
+                <span>Download vCard Contact</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Placeholder -->
+        <div class="lg:col-span-7 p-8 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft">
+          <h3 class="text-lg font-bold font-heading text-darkText dark:text-white mb-6">Send a Message</h3>
+          <form id="contactForm" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input type="text" required placeholder="Your Name" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-bgLight dark:bg-darkBg text-xs focus:outline-none focus:border-primary">
+              <input type="email" required placeholder="Your Email" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-bgLight dark:bg-darkBg text-xs focus:outline-none focus:border-primary">
+            </div>
+            <input type="text" required placeholder="Subject" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-bgLight dark:bg-darkBg text-xs focus:outline-none focus:border-primary">
+            <textarea rows="4" required placeholder="Message" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-bgLight dark:bg-darkBg text-xs focus:outline-none focus:border-primary"></textarea>
+            <button type="submit" class="bg-primary text-white text-xs font-semibold px-6 py-3 rounded-xl flex items-center space-x-2 hover:bg-primary/90 transition">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Send Inquiry</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-white dark:bg-darkBg border-t border-gray-100 dark:border-gray-800 text-center text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div>© 2026 Dr. Aravinth Ekamparam, PhD. All rights reserved.</div>
+      <div class="flex space-x-4">
+        <a href="https://www.linkedin.com/in/aravinthekamparam/" target="_blank" class="hover:text-primary">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" class="hover:text-primary">Google Scholar</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    lucide.createIcons();
+
+    // Dark Mode Toggle
+    const darkToggle = document.getElementById('darkToggle');
+    const darkToggleMobile = document.getElementById('darkToggleMobile');
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark');
+    }
+    darkToggle?.addEventListener('click', toggleTheme);
+    darkToggleMobile?.addEventListener('click', toggleTheme);
+
+    // Mobile Menu Drawer
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    mobileMenuBtn?.addEventListener('click', () => {
+      mobileDrawer.classList.toggle('hidden');
+    });
+
+    // Scroll Progress Indicator
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('scrollProgress').style.width = scrolled + '%';
+
+      // Navbar Background Shift
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 20) {
+        navbar.classList.add('bg-white/90', 'dark:bg-darkCard/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-gray-100', 'dark:border-gray-800');
+        navbar.classList.remove('bg-transparent', 'py-5');
+        navbar.classList.add('py-3');
+      } else {
+        navbar.classList.remove('bg-white/90', 'dark:bg-darkCard/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-gray-100', 'dark:border-gray-800', 'py-3');
+        navbar.classList.add('bg-transparent', 'py-5');
+      }
+    });
+
+    // Subtitle Typing Animation
+    const typingSubtitles = [
+      "Environmental Geochemistry",
+      "Groundwater Quality",
+      "Managed Aquifer Recharge",
+      "Water Treatment Systems"
+    ];
+    let typeIdx = 0, charIdx = 0, isDeleting = false;
+    const typingElement = document.getElementById('typingText');
+
+    function typeLoop() {
+      const current = typingSubtitles[typeIdx];
+      if (!isDeleting) {
+        typingElement.textContent = current.substring(0, charIdx + 1);
+        charIdx++;
+        if (charIdx === current.length) {
+          isDeleting = true;
+          setTimeout(typeLoop, 2000);
+          return;
+        }
+      } else {
+        typingElement.textContent = current.substring(0, charIdx - 1);
+        charIdx--;
+        if (charIdx === 0) {
+          isDeleting = false;
+          typeIdx = (typeIdx + 1) % typingSubtitles.length;
+        }
+      }
+      setTimeout(typeLoop, isDeleting ? 40 : 80);
+    }
+    typeLoop();
+
+    // Water Wave Canvas Animation
+    const canvas = document.getElementById('waterCanvas');
+    const ctx = canvas.getContext('2d');
+    let step = 0;
+
+    function resizeCanvas() {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function renderWaves() {
+      step += 0.015;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ctx.beginPath();
+      ctx.lineWidth = 1.5;
+      ctx.strokeStyle = 'rgba(32, 191, 234, 0.2)';
+      for (let x = 0; x <= canvas.width; x += 10) {
+        const y = Math.sin(x * 0.005 + step) * 20 + canvas.height * 0.5;
+        if (x === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.lineWidth = 1;
+      ctx.strokeStyle = 'rgba(0, 103, 184, 0.15)';
+      for (let x = 0; x <= canvas.width; x += 10) {
+        const y = Math.cos(x * 0.008 + step * 0.8) * 25 + canvas.height * 0.55;
+        if (x === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+
+      requestAnimationFrame(renderWaves);
+    }
+    renderWaves();
+
+    // Publication Search & Filter
+    const searchInput = document.getElementById('pubSearch');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const pubCards = document.querySelectorAll('.pub-card');
+
+    let currentCat = 'All';
+
+    function filterPubs() {
+      const query = searchInput.value.toLowerCase();
+      pubCards.forEach(card => {
+        const text = card.getAttribute('data-text');
+        const cat = card.getAttribute('data-category');
+        const matchesQuery = text.includes(query);
+        const matchesCat = currentCat === 'All' || cat === currentCat;
+
+        if (matchesQuery && matchesCat) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', filterPubs);
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-primary', 'text-white');
+          b.classList.add('bg-gray-100', 'dark:bg-gray-800', 'text-gray-600', 'dark:text-gray-300');
+        });
+        btn.classList.remove('bg-gray-100', 'dark:bg-gray-800', 'text-gray-600', 'dark:text-gray-300');
+        btn.classList.add('bg-primary', 'text-white');
+
+        currentCat = btn.getAttribute('data-cat');
+        filterPubs();
+      });
+    });
+
+    // vCard Download
+    document.getElementById('downloadVCard')?.addEventListener('click', () => {
+      const vCardData = `BEGIN:VCARD
+VERSION:3.0
+FN:Dr. Aravinth Ekamparam, PhD
+TITLE:Research Scientist
+ORG:Detoxyfi Technologies
+EMAIL;TYPE=INTERNET,WORK:aravinth.e@detoxyfi.com
+TEL;TYPE=WORK,VOICE:+918903656204
+URL:https://www.linkedin.com/in/aravinthekamparam/
+END:VCARD`;
+
+      const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'Dr_Aravinth_Ekamparam.vcf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+
+    // Contact Form Placeholder Submit
+    document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you! Your message inquiry has been received.');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
