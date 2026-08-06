@@ -296,16 +296,16 @@
     </div>
   </section>
 
-  <!-- Publications & Conferences -->
+  <!-- Publications (Vertical Tile / Card Grid) -->
   <section id="publications" class="py-24 bg-white dark:bg-darkCard/30 border-t border-gray-100 dark:border-gray-800">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
         <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-semibold uppercase tracking-wider">Publications</span>
-        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-darkText dark:text-white">Peer-Reviewed & Conference Papers</h2>
+        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-darkText dark:text-white">Peer-Reviewed Publications</h2>
       </div>
 
       <!-- Search & Filter Controls -->
-      <div class="mb-10 max-w-4xl mx-auto flex flex-col md:flex-row gap-4 justify-between items-center">
+      <div class="mb-12 max-w-4xl mx-auto flex flex-col md:flex-row gap-4 justify-between items-center">
         <div class="relative w-full md:w-80">
           <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-3.5 text-gray-400"></i>
           <input type="text" id="pubSearch" placeholder="Search title, journal, author..." class="w-full pl-10 pr-4 py-2.5 rounded-full border border-gray-200 dark:border-gray-700 bg-bgLight dark:bg-darkBg text-sm focus:outline-none focus:border-primary text-darkText dark:text-white">
@@ -318,125 +318,193 @@
         </div>
       </div>
 
-      <!-- Verified Publications List -->
-      <div class="space-y-6 max-w-4xl mx-auto" id="pubContainer">
+      <!-- Publication Cards Vertical Tiles Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="pubContainer">
         
-        <!-- Pub 1 -->
-        <div class="pub-card p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft flex flex-col md:flex-row md:items-center justify-between gap-6" data-category="MAR" data-text="pretreatment approaches to minimize clogging during managed aquifer recharge with drywells colloids and surfaces a ekamparam bradford sasidharan">
-          <div class="space-y-2">
-            <div class="flex items-center space-x-3">
-              <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[11px] font-bold">2025</span>
-              <span class="text-xs font-semibold text-secondary uppercase">Colloids and Surfaces A: Physicochemical and Engineering Aspects</span>
+        <!-- Tile 1: CasdS -->
+        <div class="pub-card rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/40 transition-all flex flex-col overflow-hidden group" data-category="MAR" data-text="pretreatment approaches to minimize clogging during managed aquifer recharge with drywells colloids and surfaces a ekamparam bradford sasidharan casds">
+          <div class="relative h-64 overflow-hidden bg-gray-100 dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 flex items-center justify-center">
+            <img src="papers/CasdS.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550?text=Paper+Preview+Page+1';" alt="First Page - Pretreatment Approaches to Minimize Clogging" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <a href="papers/CasdS.pdf" target="_blank" class="w-full bg-white text-darkText text-xs font-bold py-2 rounded-lg text-center shadow flex items-center justify-center gap-1">
+                <i data-lucide="eye" class="w-3.5 h-3.5"></i> Open Full PDF
+              </a>
             </div>
-            <h3 class="text-lg font-bold font-heading text-darkText dark:text-white">Pretreatment Approaches to Minimize Clogging During Managed Aquifer Recharge with Drywells</h3>
-            <p class="text-xs text-gray-500">Aravinth Siva Subramaniam Ekamparam, Scott A. Bradford, Salini Sasidharan (Vol. 726, 137891)</p>
           </div>
-          <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" class="shrink-0 text-xs font-medium text-primary hover:text-secondary bg-white dark:bg-darkBg px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center space-x-2">
-            <i data-lucide="book-open" class="w-4 h-4"></i>
-            <span>Google Scholar</span>
-          </a>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold">2025</span>
+                <span class="text-[10px] font-semibold text-secondary uppercase">Colloids & Surfaces A</span>
+              </div>
+              <h3 class="text-sm font-bold font-heading text-darkText dark:text-white line-clamp-2">Pretreatment Approaches to Minimize Clogging During Managed Aquifer Recharge with Drywells</h3>
+              <p class="text-xs text-gray-500 line-clamp-2">Aravinth Siva Subramaniam Ekamparam, Scott A. Bradford, Salini Sasidharan</p>
+            </div>
+            <div class="pt-2 border-t border-gray-200/50 dark:border-gray-700/50 flex gap-2">
+              <a href="papers/CasdS.pdf" target="_blank" class="flex-1 text-[11px] font-medium text-white bg-primary hover:bg-primary/90 py-2 rounded-xl text-center flex items-center justify-center gap-1 shadow-sm transition">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> First Page
+              </a>
+              <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" class="px-3 text-[11px] font-medium text-primary bg-white dark:bg-darkBg py-2 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-center">
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <!-- Pub 2 -->
-        <div class="pub-card p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft flex flex-col md:flex-row md:items-center justify-between gap-6" data-category="Geochemistry" data-text="kinetics of fluorapatite precipitation in fluoride-contaminated water acs es&t engineering ekamparam sujathan singh">
-          <div class="space-y-2">
-            <div class="flex items-center space-x-3">
-              <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[11px] font-bold">2024</span>
-              <span class="text-xs font-semibold text-secondary uppercase">ACS ES&T Engineering</span>
+        <!-- Tile 2: est-eng -->
+        <div class="pub-card rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/40 transition-all flex flex-col overflow-hidden group" data-category="Geochemistry" data-text="kinetics of fluorapatite precipitation in fluoride-contaminated water acs es&t engineering ekamparam sujathan singh est-eng">
+          <div class="relative h-64 overflow-hidden bg-gray-100 dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 flex items-center justify-center">
+            <img src="papers/est-eng.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550?text=Paper+Preview+Page+1';" alt="First Page - Kinetics of Fluorapatite Precipitation" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <a href="papers/est-eng.pdf" target="_blank" class="w-full bg-white text-darkText text-xs font-bold py-2 rounded-lg text-center shadow flex items-center justify-center gap-1">
+                <i data-lucide="eye" class="w-3.5 h-3.5"></i> Open Full PDF
+              </a>
             </div>
-            <h3 class="text-lg font-bold font-heading text-darkText dark:text-white">Kinetics of Fluorapatite Precipitation in Fluoride-Contaminated Water</h3>
-            <p class="text-xs text-gray-500">Aravinth Siva Subramaniam Ekamparam, Surya Sujathan, Abhas Singh (4 (10), 2370-2380)</p>
           </div>
-          <a href="https://doi.org/10.1021/acsestengg.4c00235" target="_blank" class="shrink-0 text-xs font-medium text-primary hover:text-secondary bg-white dark:bg-darkBg px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center space-x-2">
-            <i data-lucide="external-link" class="w-4 h-4"></i>
-            <span>Read Paper</span>
-          </a>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold">2024</span>
+                <span class="text-[10px] font-semibold text-secondary uppercase">ACS ES&T Engineering</span>
+              </div>
+              <h3 class="text-sm font-bold font-heading text-darkText dark:text-white line-clamp-2">Kinetics of Fluorapatite Precipitation in Fluoride-Contaminated Water</h3>
+              <p class="text-xs text-gray-500 line-clamp-2">Aravinth Siva Subramaniam Ekamparam, Surya Sujathan, Abhas Singh</p>
+            </div>
+            <div class="pt-2 border-t border-gray-200/50 dark:border-gray-700/50 flex gap-2">
+              <a href="papers/est-eng.pdf" target="_blank" class="flex-1 text-[11px] font-medium text-white bg-primary hover:bg-primary/90 py-2 rounded-xl text-center flex items-center justify-center gap-1 shadow-sm transition">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> First Page
+              </a>
+              <a href="https://doi.org/10.1021/acsestengg.4c00235" target="_blank" class="px-3 text-[11px] font-medium text-primary bg-white dark:bg-darkBg py-2 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-center">
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <!-- Pub 3 -->
-        <div class="pub-card p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft flex flex-col md:flex-row md:items-center justify-between gap-6" data-category="Water Treatment" data-text="relative extents mechanisms and kinetics of fluoride removal from synthetic groundwater by prevalent sorbents chemosphere ekamparam khaitan nimesh singh">
-          <div class="space-y-2">
-            <div class="flex items-center space-x-3">
-              <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[11px] font-bold">2023</span>
-              <span class="text-xs font-semibold text-secondary uppercase">Chemosphere</span>
+        <!-- Tile 3: Chem -->
+        <div class="pub-card rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/40 transition-all flex flex-col overflow-hidden group" data-category="Water Treatment" data-text="relative extents mechanisms and kinetics of fluoride removal from synthetic groundwater by prevalent sorbents chemosphere ekamparam khaitan nimesh singh chem">
+          <div class="relative h-64 overflow-hidden bg-gray-100 dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 flex items-center justify-center">
+            <img src="papers/Chem.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550?text=Paper+Preview+Page+1';" alt="First Page - Fluoride Removal Kinetics" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <a href="papers/Chem.pdf" target="_blank" class="w-full bg-white text-darkText text-xs font-bold py-2 rounded-lg text-center shadow flex items-center justify-center gap-1">
+                <i data-lucide="eye" class="w-3.5 h-3.5"></i> Open Full PDF
+              </a>
             </div>
-            <h3 class="text-lg font-bold font-heading text-darkText dark:text-white">Relative Extents, Mechanisms, and Kinetics of Fluoride Removal from Synthetic Groundwater by Prevalent Sorbents</h3>
-            <p class="text-xs text-gray-500">Aravinth Siva Subramaniam Ekamparam, Harshit Khaitan, Vishakha Nimesh, Abhas Singh (342, 140161)</p>
           </div>
-          <a href="https://doi.org/10.1016/j.chemosphere.2023.140161" target="_blank" class="shrink-0 text-xs font-medium text-primary hover:text-secondary bg-white dark:bg-darkBg px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center space-x-2">
-            <i data-lucide="external-link" class="w-4 h-4"></i>
-            <span>Read Paper</span>
-          </a>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold">2023</span>
+                <span class="text-[10px] font-semibold text-secondary uppercase">Chemosphere</span>
+              </div>
+              <h3 class="text-sm font-bold font-heading text-darkText dark:text-white line-clamp-2">Relative Extents, Mechanisms, and Kinetics of Fluoride Removal from Synthetic Groundwater</h3>
+              <p class="text-xs text-gray-500 line-clamp-2">A. S. S. Ekamparam, Harshit Khaitan, Vishakha Nimesh, Abhas Singh</p>
+            </div>
+            <div class="pt-2 border-t border-gray-200/50 dark:border-gray-700/50 flex gap-2">
+              <a href="papers/Chem.pdf" target="_blank" class="flex-1 text-[11px] font-medium text-white bg-primary hover:bg-primary/90 py-2 rounded-xl text-center flex items-center justify-center gap-1 shadow-sm transition">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> First Page
+              </a>
+              <a href="https://doi.org/10.1016/j.chemosphere.2023.140161" target="_blank" class="px-3 text-[11px] font-medium text-primary bg-white dark:bg-darkBg py-2 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-center">
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <!-- Pub 4 -->
-        <div class="pub-card p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft flex flex-col md:flex-row md:items-center justify-between gap-6" data-category="Geochemistry" data-text="the role of manganese carbonate precipitation in controlling fluoride and uranium mobilization in groundwater acs earth and space chemistry mohapatra sujathan ekamparam singh">
-          <div class="space-y-2">
-            <div class="flex items-center space-x-3">
-              <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[11px] font-bold">2021</span>
-              <span class="text-xs font-semibold text-secondary uppercase">ACS Earth and Space Chemistry</span>
+        <!-- Tile 4: acs-esc -->
+        <div class="pub-card rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/40 transition-all flex flex-col overflow-hidden group" data-category="Geochemistry" data-text="the role of manganese carbonate precipitation in controlling fluoride and uranium mobilization in groundwater acs earth and space chemistry mohapatra sujathan ekamparam singh acs-esc">
+          <div class="relative h-64 overflow-hidden bg-gray-100 dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 flex items-center justify-center">
+            <img src="papers/acs-esc.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550?text=Paper+Preview+Page+1';" alt="First Page - Role of Manganese Carbonate" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <a href="papers/acs-esc.pdf" target="_blank" class="w-full bg-white text-darkText text-xs font-bold py-2 rounded-lg text-center shadow flex items-center justify-center gap-1">
+                <i data-lucide="eye" class="w-3.5 h-3.5"></i> Open Full PDF
+              </a>
             </div>
-            <h3 class="text-lg font-bold font-heading text-darkText dark:text-white">The Role of Manganese Carbonate Precipitation in Controlling Fluoride and Uranium Mobilization in Groundwater</h3>
-            <p class="text-xs text-gray-500">Ashwini Kumar Mohapatra, Surya Sujathan, Aravinth Siva Subramaniam Ekamparam, Abhas Singh (5, 2700-2714)</p>
           </div>
-          <a href="https://doi.org/10.1021/acsearthspacechem.1c00133" target="_blank" class="shrink-0 text-xs font-medium text-primary hover:text-secondary bg-white dark:bg-darkBg px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center space-x-2">
-            <i data-lucide="external-link" class="w-4 h-4"></i>
-            <span>Read Paper</span>
-          </a>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold">2021</span>
+                <span class="text-[10px] font-semibold text-secondary uppercase">ACS Earth & Space Chem</span>
+              </div>
+              <h3 class="text-sm font-bold font-heading text-darkText dark:text-white line-clamp-2">The Role of Manganese Carbonate Precipitation in Controlling Fluoride and Uranium Mobilization</h3>
+              <p class="text-xs text-gray-500 line-clamp-2">Ashwini Mohapatra, Surya Sujathan, A. S. S. Ekamparam, Abhas Singh</p>
+            </div>
+            <div class="pt-2 border-t border-gray-200/50 dark:border-gray-700/50 flex gap-2">
+              <a href="papers/acs-esc.pdf" target="_blank" class="flex-1 text-[11px] font-medium text-white bg-primary hover:bg-primary/90 py-2 rounded-xl text-center flex items-center justify-center gap-1 shadow-sm transition">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> First Page
+              </a>
+              <a href="https://doi.org/10.1021/acsearthspacechem.1c00133" target="_blank" class="px-3 text-[11px] font-medium text-primary bg-white dark:bg-darkBg py-2 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-center">
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <!-- Pub 5 -->
-        <div class="pub-card p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft flex flex-col md:flex-row md:items-center justify-between gap-6" data-category="Geochemistry" data-text="transformation of calcite to fluorapatite at room temperature impact of initial phosphate and fluoride concentrations geochimica et cosmochimica acta ekamparam singh">
-          <div class="space-y-2">
-            <div class="flex items-center space-x-3">
-              <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[11px] font-bold">2020</span>
-              <span class="text-xs font-semibold text-secondary uppercase">Geochimica et Cosmochimica Acta</span>
+        <!-- Tile 5: GCA -->
+        <div class="pub-card rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/40 transition-all flex flex-col overflow-hidden group" data-category="Geochemistry" data-text="transformation of calcite to fluorapatite at room temperature impact of initial phosphate and fluoride concentrations geochimica et cosmochimica acta ekamparam singh gca">
+          <div class="relative h-64 overflow-hidden bg-gray-100 dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 flex items-center justify-center">
+            <img src="papers/GCA.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550?text=Paper+Preview+Page+1';" alt="First Page - Calcite to Fluorapatite Transformation" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <a href="papers/GCA.pdf" target="_blank" class="w-full bg-white text-darkText text-xs font-bold py-2 rounded-lg text-center shadow flex items-center justify-center gap-1">
+                <i data-lucide="eye" class="w-3.5 h-3.5"></i> Open Full PDF
+              </a>
             </div>
-            <h3 class="text-lg font-bold font-heading text-darkText dark:text-white">Transformation of Calcite to Fluorapatite at Room Temperature: Impact of Initial Phosphate and Fluoride Concentrations</h3>
-            <p class="text-xs text-gray-500">Aravinth Siva Subramaniam Ekamparam, Abhas Singh (288, 16-35)</p>
           </div>
-          <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" class="shrink-0 text-xs font-medium text-primary hover:text-secondary bg-white dark:bg-darkBg px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center space-x-2">
-            <i data-lucide="book-open" class="w-4 h-4"></i>
-            <span>Google Scholar</span>
-          </a>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold">2020</span>
+                <span class="text-[10px] font-semibold text-secondary uppercase">Geochim. Cosmochim. Acta</span>
+              </div>
+              <h3 class="text-sm font-bold font-heading text-darkText dark:text-white line-clamp-2">Transformation of Calcite to Fluorapatite at Room Temperature</h3>
+              <p class="text-xs text-gray-500 line-clamp-2">Aravinth Siva Subramaniam Ekamparam, Abhas Singh</p>
+            </div>
+            <div class="pt-2 border-t border-gray-200/50 dark:border-gray-700/50 flex gap-2">
+              <a href="papers/GCA.pdf" target="_blank" class="flex-1 text-[11px] font-medium text-white bg-primary hover:bg-primary/90 py-2 rounded-xl text-center flex items-center justify-center gap-1 shadow-sm transition">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> First Page
+              </a>
+              <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" class="px-3 text-[11px] font-medium text-primary bg-white dark:bg-darkBg py-2 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-center">
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <!-- Pub 6 -->
-        <div class="pub-card p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft flex flex-col md:flex-row md:items-center justify-between gap-6" data-category="Water Treatment" data-text="activated alumina sludge as partial substitute for fine aggregates in brick making construction and building materials pokhara ekamparam gupta rai singh">
-          <div class="space-y-2">
-            <div class="flex items-center space-x-3">
-              <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[11px] font-bold">2019</span>
-              <span class="text-xs font-semibold text-secondary uppercase">Construction and Building Materials</span>
+        <!-- Tile 6: CBM -->
+        <div class="pub-card rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/40 transition-all flex flex-col overflow-hidden group" data-category="Water Treatment" data-text="activated alumina sludge as partial substitute for fine aggregates in brick making construction and building materials pokhara ekamparam gupta rai singh cbm">
+          <div class="relative h-64 overflow-hidden bg-gray-100 dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 flex items-center justify-center">
+            <img src="papers/CBM.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550?text=Paper+Preview+Page+1';" alt="First Page - Activated Alumina Sludge Bricks" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <a href="papers/CBM.pdf" target="_blank" class="w-full bg-white text-darkText text-xs font-bold py-2 rounded-lg text-center shadow flex items-center justify-center gap-1">
+                <i data-lucide="eye" class="w-3.5 h-3.5"></i> Open Full PDF
+              </a>
             </div>
-            <h3 class="text-lg font-bold font-heading text-darkText dark:text-white">Activated Alumina Sludge as Partial Substitute for Fine Aggregates in Brick Making (Joint First Author)</h3>
-            <p class="text-xs text-gray-500">P. Pokhara, A. S. S. Ekamparam, A. B. Gupta, D. C. Rai, A. Singh (221, 244-252)</p>
           </div>
-          <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" class="shrink-0 text-xs font-medium text-primary hover:text-secondary bg-white dark:bg-darkBg px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center space-x-2">
-            <i data-lucide="book-open" class="w-4 h-4"></i>
-            <span>Google Scholar</span>
-          </a>
-        </div>
-
-        <!-- Pub 7 -->
-        <div class="pub-card p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft flex flex-col md:flex-row md:items-center justify-between gap-6" data-category="Water Treatment" data-text="degradation of dyeing effluent using fenton's oxidation ekamparam muzhumathi">
-          <div class="space-y-2">
-            <div class="flex items-center space-x-3">
-              <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[11px] font-bold">2013</span>
-              <span class="text-xs font-semibold text-secondary uppercase">Res. J. Eng. Technol.</span>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold">2019</span>
+                <span class="text-[10px] font-semibold text-secondary uppercase">Constr. Build. Mater.</span>
+              </div>
+              <h3 class="text-sm font-bold font-heading text-darkText dark:text-white line-clamp-2">Activated Alumina Sludge as Partial Substitute for Fine Aggregates in Brick Making</h3>
+              <p class="text-xs text-gray-500 line-clamp-2">P. Pokhara, A. S. S. Ekamparam, A. B. Gupta, D. C. Rai, A. Singh</p>
             </div>
-            <h3 class="text-lg font-bold font-heading text-darkText dark:text-white">Degradation of Dyeing Effluent using Fenton's Oxidation</h3>
-            <p class="text-xs text-gray-500">Aravinth Siva Subramaniam Ekamparam, E. P. Muzhumathi (4(4), 217-220)</p>
+            <div class="pt-2 border-t border-gray-200/50 dark:border-gray-700/50 flex gap-2">
+              <a href="papers/CBM.pdf" target="_blank" class="flex-1 text-[11px] font-medium text-white bg-primary hover:bg-primary/90 py-2 rounded-xl text-center flex items-center justify-center gap-1 shadow-sm transition">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> First Page
+              </a>
+              <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" class="px-3 text-[11px] font-medium text-primary bg-white dark:bg-darkBg py-2 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-center">
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
           </div>
-          <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" class="shrink-0 text-xs font-medium text-primary hover:text-secondary bg-white dark:bg-darkBg px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center space-x-2">
-            <i data-lucide="book-open" class="w-4 h-4"></i>
-            <span>Google Scholar</span>
-          </a>
         </div>
 
       </div>
 
       <!-- Manuscripts & Conference Presentations -->
-      <div class="mt-12 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="mt-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800">
           <h4 class="text-sm font-bold font-heading text-primary uppercase tracking-wider mb-3 flex items-center gap-2">
             <i data-lucide="clock" class="w-4 h-4"></i> Under Review
@@ -992,7 +1060,7 @@
       });
     });
 
-    // vCard Download with Correct CV Information
+    // vCard Download
     document.getElementById('downloadVCard')?.addEventListener('click', () => {
       const vCardData = `BEGIN:VCARD
 VERSION:3.0
