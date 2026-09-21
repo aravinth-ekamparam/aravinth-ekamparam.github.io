@@ -17,10 +17,10 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Fonts: Manrope (Headings) & Inter (Body) -->
+  <!-- Classic Modern Fonts: Cormorant Garamond & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -28,22 +28,22 @@
       theme: {
         extend: {
           colors: {
-            primary: '#0067B8',
-            secondary: '#20BFEA',
-            bgLight: '#F8FBFD',
-            darkText: '#183153',
-            accent: '#27C2E2',
+            primary: '#184E44',      /* Heritage Deep Emerald */
+            secondary: '#C29B38',    /* Burnished Gold */
+            accent: '#D4AF37',       /* Antique Brass */
+            bgLight: '#FAF9F6',      /* Warm Alabaster */
+            darkText: '#1A2421',     /* Deep Forest Charcoal */
             cardLight: '#FFFFFF',
-            darkBg: '#0B132B',
-            darkCard: '#1C2541',
+            darkBg: '#0F1715',       /* Deep Obsidian Moss */
+            darkCard: '#17221F',
           },
           fontFamily: {
-            heading: ['Manrope', 'sans-serif'],
-            body: ['Inter', 'sans-serif'],
+            serifHeading: ['"Cormorant Garamond"', 'serif'],
+            body: ['"Plus Jakarta Sans"', 'sans-serif'],
           },
           boxShadow: {
-            soft: '0 10px 30px -10px rgba(0, 103, 184, 0.08)',
-            glow: '0 0 25px rgba(32, 191, 234, 0.25)',
+            soft: '0 12px 35px -10px rgba(24, 78, 68, 0.07)',
+            glow: '0 0 25px rgba(194, 155, 56, 0.3)',
           }
         }
       }
@@ -51,17 +51,12 @@
   </script>
 
   <style>
-    body { font-family: 'Inter', sans-serif; }
-    h1, h2, h3, h4, .font-heading { font-family: 'Manrope', sans-serif; }
-    .floating { animation: float 6s ease-in-out infinite; }
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-12px); }
-    }
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #F8FBFD; }
-    .dark ::-webkit-scrollbar-track { background: #0B132B; }
-    ::-webkit-scrollbar-thumb { background: #20BFEA; border-radius: 4px; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    h1, h2, h3, h4, .font-classic { font-family: 'Cormorant Garamond', Georgia, serif; }
+    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar-track { background: #FAF9F6; }
+    .dark ::-webkit-scrollbar-track { background: #0F1715; }
+    ::-webkit-scrollbar-thumb { background: #C29B38; border-radius: 4px; }
   </style>
 
   <!-- Structured Data JSON-LD -->
@@ -87,43 +82,45 @@
   }
   </script>
 </head>
-<body class="bg-bgLight dark:bg-darkBg text-darkText dark:text-gray-200 transition-colors duration-300">
+<body class="bg-bgLight dark:bg-darkBg text-darkText dark:text-stone-200 transition-colors duration-300 antialiased selection:bg-secondary/20 selection:text-primary">
 
   <!-- Scroll Progress Bar -->
-  <div class="fixed top-0 left-0 w-full h-1 bg-transparent z-[100]">
+  <div class="fixed top-0 left-0 w-full h-[3px] bg-transparent z-[100]">
     <div id="scrollProgress" class="h-full bg-gradient-to-r from-primary via-secondary to-accent w-0 transition-all duration-150"></div>
   </div>
 
   <!-- Navigation Bar -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 bg-transparent">
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-6 bg-transparent">
     <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-      <a href="#home" class="flex items-center space-x-3 group">
-        <div class="w-10 h-10 rounded-full bg-primary text-white font-heading font-bold flex items-center justify-center text-lg shadow-sm">AE</div>
+      <a href="#home" class="flex items-center space-x-3.5 group">
+        <div class="w-10 h-10 rounded-lg bg-primary dark:bg-stone-800 border border-secondary/40 text-secondary font-classic font-bold flex items-center justify-center text-xl shadow-sm">
+          AE
+        </div>
         <div>
-          <span class="font-heading font-bold text-base block leading-tight text-darkText dark:text-white">Dr. Aravinth Ekamparam</span>
-          <span class="text-xs text-gray-500 dark:text-gray-400">Research Scientist</span>
+          <span class="font-classic font-bold text-lg block leading-tight text-darkText dark:text-white tracking-wide">Dr. Aravinth Ekamparam</span>
+          <span class="text-[11px] text-stone-500 dark:text-stone-400 uppercase tracking-wider font-semibold">Research Scientist</span>
         </div>
       </a>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
-        <a href="#about" class="hover:text-primary dark:hover:text-secondary transition">About</a>
-        <a href="#research" class="hover:text-primary dark:hover:text-secondary transition">Research</a>
-        <a href="#publications" class="hover:text-primary dark:hover:text-secondary transition">Publications</a>
-        <a href="#projects" class="hover:text-primary dark:hover:text-secondary transition">Projects</a>
-        <a href="#skills" class="hover:text-primary dark:hover:text-secondary transition">Skills</a>
-        <a href="#experience" class="hover:text-primary dark:hover:text-secondary transition">Experience</a>
-        <a href="#contact" class="hover:text-primary dark:hover:text-secondary transition">Contact</a>
+      <nav class="hidden lg:flex items-center space-x-7 text-xs font-semibold uppercase tracking-widest text-stone-600 dark:text-stone-300">
+        <a href="#about" class="hover:text-secondary transition">About</a>
+        <a href="#research" class="hover:text-secondary transition">Research</a>
+        <a href="#publications" class="hover:text-secondary transition">Publications</a>
+        <a href="#projects" class="hover:text-secondary transition">Projects</a>
+        <a href="#skills" class="hover:text-secondary transition">Skills</a>
+        <a href="#experience" class="hover:text-secondary transition">Experience</a>
+        <a href="#contact" class="hover:text-secondary transition">Contact</a>
       </nav>
 
       <div class="hidden lg:flex items-center space-x-4">
-        <button id="darkToggle" aria-label="Toggle Theme" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition">
-          <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
-          <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-amber-400"></i>
+        <button id="darkToggle" aria-label="Toggle Theme" class="p-2.5 rounded-full hover:bg-stone-200/60 dark:hover:bg-stone-800 transition text-stone-600 dark:text-stone-300">
+          <i data-lucide="moon" class="w-4 h-4 dark:hidden"></i>
+          <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-secondary"></i>
         </button>
-        <a href="cv.pdf" download class="bg-primary hover:bg-primary/90 text-white text-xs font-semibold px-4 py-2.5 rounded-full flex items-center space-x-2 shadow-sm transition hover:shadow-glow">
-          <i data-lucide="file-text" class="w-4 h-4"></i>
-          <span>Download CV</span>
+        <a href="cv.pdf" download class="bg-primary hover:bg-primary/90 text-stone-100 text-xs font-medium uppercase tracking-wider px-5 py-2.5 rounded-md border border-secondary/30 transition hover:shadow-glow flex items-center space-x-2">
+          <i data-lucide="file-text" class="w-3.5 h-3.5 text-secondary"></i>
+          <span>Curriculum Vitae</span>
         </a>
       </div>
 
@@ -131,7 +128,7 @@
       <div class="lg:hidden flex items-center space-x-2">
         <button id="darkToggleMobile" aria-label="Toggle Theme" class="p-2 text-darkText dark:text-white">
           <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
-          <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-amber-400"></i>
+          <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-secondary"></i>
         </button>
         <button id="mobileMenuBtn" aria-label="Open Menu" class="p-2 text-darkText dark:text-white">
           <i data-lucide="menu" class="w-6 h-6"></i>
@@ -140,212 +137,216 @@
     </div>
 
     <!-- Mobile Drawer -->
-    <div id="mobileDrawer" class="hidden lg:hidden bg-white/95 dark:bg-darkCard/95 border-b border-gray-200 dark:border-gray-800 px-6 py-4 space-y-3">
-      <a href="#about" class="block py-2 border-b border-gray-100 dark:border-gray-800">About</a>
-      <a href="#research" class="block py-2 border-b border-gray-100 dark:border-gray-800">Research</a>
-      <a href="#publications" class="block py-2 border-b border-gray-100 dark:border-gray-800">Publications</a>
-      <a href="#projects" class="block py-2 border-b border-gray-100 dark:border-gray-800">Projects</a>
-      <a href="#skills" class="block py-2 border-b border-gray-100 dark:border-gray-800">Skills</a>
-      <a href="#experience" class="block py-2 border-b border-gray-100 dark:border-gray-800">Experience</a>
-      <a href="#contact" class="block py-2">Contact</a>
-      <a href="cv.pdf" download class="w-full bg-primary text-white text-center text-xs font-semibold py-3 rounded-full flex justify-center items-center space-x-2">
-        <i data-lucide="file-text" class="w-4 h-4"></i>
+    <div id="mobileDrawer" class="hidden lg:hidden bg-bgLight/95 dark:bg-darkCard/95 border-b border-stone-200 dark:border-stone-800 px-6 py-5 space-y-3">
+      <a href="#about" class="block py-2 border-b border-stone-200/50 dark:border-stone-800 text-sm">About</a>
+      <a href="#research" class="block py-2 border-b border-stone-200/50 dark:border-stone-800 text-sm">Research</a>
+      <a href="#publications" class="block py-2 border-b border-stone-200/50 dark:border-stone-800 text-sm">Publications</a>
+      <a href="#projects" class="block py-2 border-b border-stone-200/50 dark:border-stone-800 text-sm">Projects</a>
+      <a href="#skills" class="block py-2 border-b border-stone-200/50 dark:border-stone-800 text-sm">Skills</a>
+      <a href="#experience" class="block py-2 border-b border-stone-200/50 dark:border-stone-800 text-sm">Experience</a>
+      <a href="#contact" class="block py-2 text-sm">Contact</a>
+      <a href="cv.pdf" download class="w-full bg-primary text-white text-center text-xs font-semibold py-3 rounded-md flex justify-center items-center space-x-2">
+        <i data-lucide="file-text" class="w-4 h-4 text-secondary"></i>
         <span>Download CV</span>
       </a>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
-    <canvas id="waterCanvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-60"></canvas>
+  <section id="home" class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
+    <canvas id="waterCanvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-40"></canvas>
 
-    <div class="max-w-7xl mx-auto px-6 relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      <!-- Profile Visual (Updated to Rectangular Card) -->
-      <div class="lg:col-span-5 flex justify-center">
-        <div class="relative w-full max-w-xs sm:max-w-sm">
-          <!-- Ambient Glow -->
-          <div class="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-primary/30 via-secondary/30 to-accent/30 opacity-40 blur-xl"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      
+      <!-- Seamless Photo (No Outer Rectangle Card Framing) -->
+      <div class="lg:col-span-5 flex justify-center lg:justify-start">
+        <div class="relative max-w-sm w-full">
+          <!-- Subtle Classic Radial Accent Glow -->
+          <div class="absolute -inset-4 bg-gradient-to-tr from-secondary/20 via-primary/10 to-transparent blur-2xl opacity-60 rounded-full pointer-events-none"></div>
           
-          <!-- Rectangular Card Container -->
-          <div class="floating relative rounded-2xl sm:rounded-3xl bg-white dark:bg-darkCard p-3 sm:p-4 shadow-2xl border border-gray-100 dark:border-gray-800">
-            <div class="relative w-full aspect-[4/5] rounded-xl sm:rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/10 to-gray-100 dark:to-gray-900 border border-gray-100 dark:border-gray-800 shadow-inner">
-              <img src="profile.jpg" alt="Dr. Aravinth Ekamparam" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
-            </div>
-            <!-- Caption below Rectangle -->
-            <div class="pt-3 pb-1 text-center">
-              <h2 class="font-heading font-bold text-base text-darkText dark:text-white">Dr. Aravinth Ekamparam</h2>
-              <p class="text-xs text-secondary font-medium mt-0.5">PhD (IIT Kanpur) • Ex-Postdoc (OSU)</p>
-            </div>
+          <!-- Photo Container -->
+          <div class="relative overflow-hidden group">
+            <img 
+              src="profile.jpg" 
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80';"
+              alt="Dr. Aravinth Siva Subramaniam Ekamparam" 
+              class="w-full h-auto max-h-[460px] object-cover object-top filter drop-shadow-xl transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+            >
+            <!-- Elegant Gradient Bottom Blend -->
+            <div class="absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-bgLight dark:from-darkBg to-transparent pointer-events-none"></div>
           </div>
         </div>
       </div>
 
       <!-- Hero Content -->
       <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-        <!-- Single PhD display, Detoxyfi pill badge removed -->
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-darkText dark:text-white tracking-tight leading-tight">
-          Dr. Aravinth Ekamparam, <span class="text-primary font-light">PhD</span>
-        </h1>
-
-        <div class="text-lg sm:text-2xl text-gray-600 dark:text-gray-300 font-medium h-8">
-          Focus: <span id="typingText" class="text-secondary font-semibold"></span><span class="animate-pulse border-r-2 border-secondary ml-1"></span>
+        <div class="inline-flex items-center space-x-2.5 px-3.5 py-1 rounded-full bg-secondary/10 border border-secondary/30 text-secondary text-xs font-semibold tracking-wider uppercase">
+          <span>PhD (IIT Kanpur) • Ex-Postdoc (OSU)</span>
         </div>
 
-        <p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl">
-          Environmental geochemist with 10+ years of experience specializing in mineral-water interfacial processes, geochemical characterisation of soils & sediments, contaminant speciation/mobility, and pretreatment strategies for managed aquifer recharge (MAR) systems.
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold font-classic text-darkText dark:text-stone-100 tracking-tight leading-[1.08]">
+          Dr. Aravinth Ekamparam, <span class="text-secondary font-normal italic">PhD</span>
+        </h1>
+
+        <div class="text-lg sm:text-2xl text-stone-600 dark:text-stone-300 font-light font-classic italic h-8">
+          Focus: <span id="typingText" class="text-primary dark:text-secondary font-medium not-italic"></span><span class="animate-pulse border-r-2 border-secondary ml-1"></span>
+        </div>
+
+        <p class="text-sm sm:text-base text-stone-600 dark:text-stone-300 leading-relaxed max-w-2xl font-light">
+          Environmental geochemist with 10+ years of dedicated expertise specializing in mineral-water interfacial processes, geochemical characterisation of soils & sediments, contaminant speciation/mobility, and engineered pretreatment for managed aquifer recharge (MAR) systems.
         </p>
 
-        <div class="pt-4 flex flex-wrap gap-4 justify-center lg:justify-start">
-          <a href="cv.pdf" download class="bg-primary hover:bg-primary/90 text-white text-sm font-medium px-6 py-3 rounded-full shadow-md hover:shadow-glow transition flex items-center space-x-2">
-            <i data-lucide="file-text" class="w-4 h-4"></i>
+        <div class="pt-3 flex flex-wrap gap-4 justify-center lg:justify-start items-center">
+          <a href="cv.pdf" download class="bg-primary hover:bg-primary/95 text-stone-100 text-xs font-semibold uppercase tracking-wider px-6 py-3.5 rounded-md shadow-sm hover:shadow-glow transition flex items-center space-x-2 border border-secondary/40">
+            <i data-lucide="file-text" class="w-4 h-4 text-secondary"></i>
             <span>Download CV</span>
           </a>
-          <a href="#contact" class="bg-white dark:bg-darkCard text-darkText dark:text-white border border-gray-200 dark:border-gray-700 hover:border-primary text-sm font-medium px-6 py-3 rounded-full shadow-sm transition flex items-center space-x-2">
-            <i data-lucide="mail" class="w-4 h-4 text-primary"></i>
-            <span>Contact</span>
+          <a href="#contact" class="bg-transparent hover:bg-stone-100 dark:hover:bg-stone-800 text-darkText dark:text-stone-200 border border-stone-300 dark:border-stone-700 text-xs font-semibold uppercase tracking-wider px-6 py-3.5 rounded-md transition flex items-center space-x-2">
+            <i data-lucide="mail" class="w-4 h-4 text-secondary"></i>
+            <span>Get In Touch</span>
           </a>
-          <a href="https://www.linkedin.com/in/aravinth-ekamparam/" target="_blank" aria-label="LinkedIn" class="p-3 bg-white dark:bg-darkCard border border-gray-200 dark:border-gray-700 rounded-full text-gray-600 dark:text-gray-300 hover:text-primary transition">
-            <i data-lucide="linkedin" class="w-5 h-5"></i>
+          <a href="https://www.linkedin.com/in/aravinth-ekamparam/" target="_blank" aria-label="LinkedIn" class="p-3 bg-white dark:bg-darkCard border border-stone-200 dark:border-stone-800 rounded-md text-stone-600 dark:text-stone-300 hover:text-secondary transition">
+            <i data-lucide="linkedin" class="w-4 h-4"></i>
           </a>
-          <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" aria-label="Google Scholar" class="p-3 bg-white dark:bg-darkCard border border-gray-200 dark:border-gray-700 rounded-full text-gray-600 dark:text-gray-300 hover:text-primary transition">
-            <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+          <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" aria-label="Google Scholar" class="p-3 bg-white dark:bg-darkCard border border-stone-200 dark:border-stone-800 rounded-md text-stone-600 dark:text-stone-300 hover:text-secondary transition">
+            <i data-lucide="graduation-cap" class="w-4 h-4"></i>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About & Statistics -->
-  <section id="about" class="py-20 bg-white dark:bg-darkCard/50 border-y border-gray-100 dark:border-gray-800">
+  <!-- About & Key Metrics -->
+  <section id="about" class="py-24 bg-white dark:bg-darkCard/40 border-y border-stone-200/60 dark:border-stone-800/60">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div class="lg:col-span-7 space-y-6">
-          <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-semibold uppercase tracking-wider">Academic Profile</span>
-          <h2 class="text-3xl font-bold font-heading text-darkText dark:text-white">Environmental Geochemistry & Subsurface Hydrology</h2>
-          <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
-            Dr. Aravinth Siva Subramaniam Ekamparam earned his Ph.D. in Environmental Engineering from the <strong>Indian Institute of Technology Kanpur (IIT Kanpur)</strong> under Dr. Abhas Singh, followed by three years of postdoctoral research at <strong>Oregon State University (OSU)</strong> under Dr. Salini Sasidharan.
+          <span class="px-3.5 py-1 rounded-full bg-primary/10 text-primary dark:text-secondary text-xs font-semibold uppercase tracking-widest">Scholarly Profile</span>
+          <h2 class="text-3xl sm:text-5xl font-bold font-classic text-darkText dark:text-white">Environmental Geochemistry & Hydrology</h2>
+          <p class="text-stone-600 dark:text-stone-300 leading-relaxed text-sm sm:text-base font-light">
+            Dr. Aravinth Siva Subramaniam Ekamparam received his Ph.D. in Environmental Engineering from the <strong>Indian Institute of Technology Kanpur (IIT Kanpur)</strong> under Dr. Abhas Singh[cite: 4], followed by three years of postdoctoral research at <strong>Oregon State University (OSU)</strong> under Dr. Salini Sasidharan[cite: 4].
           </p>
-          <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
-            His research integrates mineral phase transformations (calcite to fluorapatite), column clogging dynamics in drywells, agrivoltaic water harvesting, kinetic modeling of geogenic contaminants (Fluoride, Arsenic, Uranium, Chromium), and point-of-use industrial wastewater treatment.
+          <p class="text-stone-600 dark:text-stone-300 leading-relaxed text-sm sm:text-base font-light">
+            His research integrates mineral phase transformations (calcite to fluorapatite), column physical clogging dynamics in drywells, agrivoltaic rainwater harvesting, kinetic modeling of geogenic contaminants (Fluoride, Arsenic, Uranium, Chromium), and point-of-use industrial wastewater solutions[cite: 4].
           </p>
         </div>
 
-        <!-- 4 Statistics Cards -->
-        <div class="lg:col-span-5 grid grid-cols-2 gap-4">
-          <div class="p-6 rounded-2xl bg-bgLight dark:bg-darkBg border border-gray-100 dark:border-gray-800 text-center shadow-soft">
-            <div class="text-3xl sm:text-4xl font-extrabold font-heading text-primary dark:text-secondary">10+</div>
-            <div class="text-xs text-gray-500 dark:text-gray-400 mt-2 font-medium">Years Research Experience</div>
+        <!-- 4 Classic Metric Blocks -->
+        <div class="lg:col-span-5 grid grid-cols-2 gap-5">
+          <div class="p-6 rounded-lg bg-bgLight dark:bg-darkBg border border-stone-200/70 dark:border-stone-800 text-center shadow-soft">
+            <div class="text-3xl sm:text-4xl font-bold font-classic text-primary dark:text-secondary">10+</div>
+            <div class="text-xs text-stone-500 dark:text-stone-400 mt-2 uppercase tracking-wider font-medium">Years Research Exp[cite: 4]</div>
           </div>
-          <div class="p-6 rounded-2xl bg-bgLight dark:bg-darkBg border border-gray-100 dark:border-gray-800 text-center shadow-soft">
-            <div class="text-3xl sm:text-4xl font-extrabold font-heading text-primary dark:text-secondary">20+</div>
-            <div class="text-xs text-gray-500 dark:text-gray-400 mt-2 font-medium">Papers & Presentations</div>
+          <div class="p-6 rounded-lg bg-bgLight dark:bg-darkBg border border-stone-200/70 dark:border-stone-800 text-center shadow-soft">
+            <div class="text-3xl sm:text-4xl font-bold font-classic text-primary dark:text-secondary">20+</div>
+            <div class="text-xs text-stone-500 dark:text-stone-400 mt-2 uppercase tracking-wider font-medium">Publications & Talks[cite: 4]</div>
           </div>
-          <div class="p-6 rounded-2xl bg-bgLight dark:bg-darkBg border border-gray-100 dark:border-gray-800 text-center shadow-soft">
-            <div class="text-3xl sm:text-4xl font-extrabold font-heading text-primary dark:text-secondary">$65K</div>
-            <div class="text-xs text-gray-500 dark:text-gray-400 mt-2 font-medium">Funded Co-PI Grants</div>
+          <div class="p-6 rounded-lg bg-bgLight dark:bg-darkBg border border-stone-200/70 dark:border-stone-800 text-center shadow-soft">
+            <div class="text-3xl sm:text-4xl font-bold font-classic text-primary dark:text-secondary">$65K</div>
+            <div class="text-xs text-stone-500 dark:text-stone-400 mt-2 uppercase tracking-wider font-medium">Funded Co-PI Grants[cite: 4]</div>
           </div>
-          <div class="p-6 rounded-2xl bg-bgLight dark:bg-darkBg border border-gray-100 dark:border-gray-800 text-center shadow-soft">
-            <div class="text-3xl sm:text-4xl font-extrabold font-heading text-primary dark:text-secondary">11+</div>
-            <div class="text-xs text-gray-500 dark:text-gray-400 mt-2 font-medium">Major Applied Projects</div>
+          <div class="p-6 rounded-lg bg-bgLight dark:bg-darkBg border border-stone-200/70 dark:border-stone-800 text-center shadow-soft">
+            <div class="text-3xl sm:text-4xl font-bold font-classic text-primary dark:text-secondary">11+</div>
+            <div class="text-xs text-stone-500 dark:text-stone-400 mt-2 uppercase tracking-wider font-medium">Major Projects[cite: 4]</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Research Areas -->
+  <!-- Research Vectors -->
   <section id="research" class="py-24 bg-bgLight dark:bg-darkBg">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider">Specializations</span>
-        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-darkText dark:text-white">Primary Research Vectors</h2>
+        <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-semibold uppercase tracking-widest">Specializations[cite: 4]</span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-classic text-darkText dark:text-white">Primary Research Vectors</h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="p-8 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/50 transition-all transform hover:-translate-y-1 group">
-          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
+        <div class="p-8 rounded-lg bg-white dark:bg-darkCard border border-stone-200/80 dark:border-stone-800 shadow-soft hover:border-secondary/50 transition duration-300">
+          <div class="w-12 h-12 rounded-md bg-primary/10 text-primary dark:text-secondary flex items-center justify-center mb-6">
             <i data-lucide="flask-conical" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-xl font-bold font-heading text-darkText dark:text-white mb-3">Environmental Geochemistry</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Mineral-water interfacial processes, soil/sediment speciation, fluorapatite nucleation, and sorption thermodynamics.</p>
+          <h3 class="text-xl font-bold font-classic text-darkText dark:text-white mb-2">Environmental Geochemistry[cite: 4]</h3>
+          <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed font-light">Mineral-water interfacial processes, soil/sediment speciation, fluorapatite nucleation, and sorption thermodynamics[cite: 4].</p>
         </div>
 
-        <div class="p-8 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/50 transition-all transform hover:-translate-y-1 group">
-          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition">
+        <div class="p-8 rounded-lg bg-white dark:bg-darkCard border border-stone-200/80 dark:border-stone-800 shadow-soft hover:border-secondary/50 transition duration-300">
+          <div class="w-12 h-12 rounded-md bg-primary/10 text-primary dark:text-secondary flex items-center justify-center mb-6">
             <i data-lucide="droplets" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-xl font-bold font-heading text-darkText dark:text-white mb-3">Groundwater Quality & Safety</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Fate & transport of geogenic contaminants (F⁻, As, U, Cr, Nitrate), subsurface leaching, and surface water intrusion.</p>
+          <h3 class="text-xl font-bold font-classic text-darkText dark:text-white mb-2">Groundwater Quality & Safety[cite: 4]</h3>
+          <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed font-light">Fate & transport of geogenic contaminants (F⁻, As, U, Cr, Nitrate), subsurface leaching, and surface water intrusion[cite: 4].</p>
         </div>
 
-        <div class="p-8 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/50 transition-all transform hover:-translate-y-1 group">
-          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition">
+        <div class="p-8 rounded-lg bg-white dark:bg-darkCard border border-stone-200/80 dark:border-stone-800 shadow-soft hover:border-secondary/50 transition duration-300">
+          <div class="w-12 h-12 rounded-md bg-primary/10 text-primary dark:text-secondary flex items-center justify-center mb-6">
             <i data-lucide="waves" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-xl font-bold font-heading text-darkText dark:text-white mb-3">Managed Aquifer Recharge (MAR)</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Pretreatment systems for drywell MAR, agrivoltaic rainwater harvesting, physical/biological clogging, and backflushing.</p>
+          <h3 class="text-xl font-bold font-classic text-darkText dark:text-white mb-2">Managed Aquifer Recharge[cite: 4]</h3>
+          <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed font-light">Pretreatment systems for drywell MAR, agrivoltaic rainwater harvesting, physical/biological clogging, and backflushing[cite: 4].</p>
         </div>
 
-        <div class="p-8 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/50 transition-all transform hover:-translate-y-1 group">
-          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition">
+        <div class="p-8 rounded-lg bg-white dark:bg-darkCard border border-stone-200/80 dark:border-stone-800 shadow-soft hover:border-secondary/50 transition duration-300">
+          <div class="w-12 h-12 rounded-md bg-primary/10 text-primary dark:text-secondary flex items-center justify-center mb-6">
             <i data-lucide="filter" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-xl font-bold font-heading text-darkText dark:text-white mb-3">Physicochemical Water Treatment</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Point-of-use industrial wastewater treatment (90% COD reduction), polymer-coated quartz sand sorbents, and sludge recycling.</p>
+          <h3 class="text-xl font-bold font-classic text-darkText dark:text-white mb-2">Water Treatment[cite: 4]</h3>
+          <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed font-light">Point-of-use industrial wastewater treatment, polymer-coated quartz sand sorbents, and sludge recycling[cite: 4].</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Publications Section -->
-  <section id="publications" class="py-24 bg-white dark:bg-darkCard/30 border-t border-gray-100 dark:border-gray-800">
+  <section id="publications" class="py-24 bg-white dark:bg-darkCard/30 border-t border-stone-200/70 dark:border-stone-800">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
-        <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-semibold uppercase tracking-wider">Publications</span>
-        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-darkText dark:text-white">Peer-Reviewed Publications</h2>
+        <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-semibold uppercase tracking-widest">Scholarship[cite: 4]</span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-classic text-darkText dark:text-white">Peer-Reviewed Publications</h2>
       </div>
 
       <!-- Search & Filter Controls -->
       <div class="mb-12 max-w-4xl mx-auto flex flex-col md:flex-row gap-4 justify-between items-center">
         <div class="relative w-full md:w-80">
-          <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-3.5 text-gray-400"></i>
-          <input type="text" id="pubSearch" placeholder="Search title, journal, author..." class="w-full pl-10 pr-4 py-2.5 rounded-full border border-gray-200 dark:border-gray-700 bg-bgLight dark:bg-darkBg text-sm focus:outline-none focus:border-primary text-darkText dark:text-white">
+          <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-3.5 text-stone-400"></i>
+          <input type="text" id="pubSearch" placeholder="Search title, journal, author..." class="w-full pl-10 pr-4 py-2.5 rounded-md border border-stone-200 dark:border-stone-700 bg-bgLight dark:bg-darkBg text-xs focus:outline-none focus:border-secondary text-darkText dark:text-white">
         </div>
         <div class="flex flex-wrap justify-center gap-2" id="pubFilterBtns">
-          <button data-cat="All" class="filter-btn active text-xs font-semibold px-4 py-2 rounded-full bg-primary text-white">All</button>
-          <button data-cat="MAR" class="filter-btn text-xs font-semibold px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">MAR</button>
-          <button data-cat="Geochemistry" class="filter-btn text-xs font-semibold px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Geochemistry</button>
-          <button data-cat="Water Treatment" class="filter-btn text-xs font-semibold px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Water Treatment</button>
+          <button data-cat="All" class="filter-btn active text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-md bg-primary text-stone-100">All</button>
+          <button data-cat="MAR" class="filter-btn text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-md bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300">MAR</button>
+          <button data-cat="Geochemistry" class="filter-btn text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-md bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300">Geochemistry</button>
+          <button data-cat="Water Treatment" class="filter-btn text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-md bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300">Water Treatment</button>
         </div>
       </div>
 
-      <!-- Publication Cards Vertical Tiles Grid -->
+      <!-- Cards Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="pubContainer">
         
         <!-- Tile 1: CasdS -->
-        <div class="pub-card rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/40 transition-all flex flex-col overflow-hidden group" data-category="MAR" data-text="pretreatment approaches to minimize clogging during managed aquifer recharge with drywells colloids and surfaces a ekamparam bradford sasidharan casds">
-          <div class="relative h-64 overflow-hidden bg-gray-100 dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 flex items-center justify-center">
-            <img src="papers/CasdS.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550?text=Paper+Preview+Page+1';" alt="First Page - Pretreatment Approaches to Minimize Clogging" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-              <a href="papers/CasdS.pdf" target="_blank" class="w-full bg-white text-darkText text-xs font-bold py-2 rounded-lg text-center shadow flex items-center justify-center gap-1">
-                <i data-lucide="eye" class="w-3.5 h-3.5"></i> Open Full PDF
+        <div class="pub-card rounded-lg bg-bgLight dark:bg-darkCard border border-stone-200/80 dark:border-stone-800 shadow-soft hover:shadow-xl hover:border-secondary/50 transition-all flex flex-col overflow-hidden group" data-category="MAR" data-text="pretreatment approaches to minimize clogging during managed aquifer recharge with drywells colloids and surfaces a ekamparam bradford sasidharan casds">
+          <div class="relative h-60 overflow-hidden bg-stone-100 dark:bg-stone-900 border-b border-stone-200/60 dark:border-stone-800 flex items-center justify-center">
+            <img src="papers/CasdS.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550?text=Pretreatment+Approaches+PDF';" alt="First Page - Pretreatment Approaches" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <a href="papers/CasdS.pdf" target="_blank" class="w-full bg-white text-darkText text-xs font-semibold uppercase tracking-wider py-2 rounded text-center shadow flex items-center justify-center gap-1.5">
+                <i data-lucide="eye" class="w-3.5 h-3.5 text-secondary"></i> Read Article[cite: 4]
               </a>
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div class="space-y-2">
               <div class="flex items-center justify-between">
-                <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold">2025</span>
-                <span class="text-[10px] font-semibold text-secondary uppercase">Colloids & Surfaces A</span>
+                <span class="px-2 py-0.5 rounded bg-primary/10 text-primary dark:text-secondary text-[10px] font-bold">2025</span>
+                <span class="text-[10px] font-semibold text-secondary uppercase tracking-widest">Colloids & Surfaces A</span>
               </div>
-              <h3 class="text-sm font-bold font-heading text-darkText dark:text-white line-clamp-2">Pretreatment Approaches to Minimize Clogging During Managed Aquifer Recharge with Drywells</h3>
-              <p class="text-xs text-gray-500 line-clamp-2">Aravinth Siva Subramaniam Ekamparam, Scott A. Bradford, Salini Sasidharan</p>
+              <h3 class="text-sm font-bold font-classic text-darkText dark:text-white line-clamp-2">Pretreatment Approaches to Minimize Clogging During Managed Aquifer Recharge with Drywells</h3>
+              <p class="text-xs text-stone-500 font-light line-clamp-2">Aravinth Siva Subramaniam Ekamparam, Scott A. Bradford, Salini Sasidharan</p>
             </div>
-            <div class="pt-2 border-t border-gray-200/50 dark:border-gray-700/50 flex gap-2">
-              <a href="papers/CasdS.pdf" target="_blank" class="flex-1 text-[11px] font-medium text-white bg-primary hover:bg-primary/90 py-2 rounded-xl text-center flex items-center justify-center gap-1 shadow-sm transition">
-                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> First Page
+            <div class="pt-2 border-t border-stone-200/50 dark:border-stone-800 flex gap-2">
+              <a href="papers/CasdS.pdf" target="_blank" class="flex-1 text-[11px] font-semibold uppercase tracking-wider text-stone-100 bg-primary hover:bg-primary/90 py-2 rounded text-center flex items-center justify-center gap-1 transition">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-secondary"></i> First Page
               </a>
-              <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" class="px-3 text-[11px] font-medium text-primary bg-white dark:bg-darkBg py-2 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-center">
+              <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" class="px-3 text-[11px] font-medium text-secondary bg-white dark:bg-darkBg py-2 rounded border border-stone-200 dark:border-stone-800 flex items-center justify-center">
                 <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
               </a>
             </div>
@@ -353,29 +354,29 @@
         </div>
 
         <!-- Tile 2: est-eng -->
-        <div class="pub-card rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/40 transition-all flex flex-col overflow-hidden group" data-category="Geochemistry" data-text="kinetics of fluorapatite precipitation in fluoride-contaminated water acs es&t engineering ekamparam sujathan singh est-eng">
-          <div class="relative h-64 overflow-hidden bg-gray-100 dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 flex items-center justify-center">
-            <img src="papers/est-eng.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550?text=Paper+Preview+Page+1';" alt="First Page - Kinetics of Fluorapatite Precipitation" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-              <a href="papers/est-eng.pdf" target="_blank" class="w-full bg-white text-darkText text-xs font-bold py-2 rounded-lg text-center shadow flex items-center justify-center gap-1">
-                <i data-lucide="eye" class="w-3.5 h-3.5"></i> Open Full PDF
+        <div class="pub-card rounded-lg bg-bgLight dark:bg-darkCard border border-stone-200/80 dark:border-stone-800 shadow-soft hover:shadow-xl hover:border-secondary/50 transition-all flex flex-col overflow-hidden group" data-category="Geochemistry" data-text="kinetics of fluorapatite precipitation in fluoride-contaminated water acs es&t engineering ekamparam sujathan singh est-eng">
+          <div class="relative h-60 overflow-hidden bg-stone-100 dark:bg-stone-900 border-b border-stone-200/60 dark:border-stone-800 flex items-center justify-center">
+            <img src="papers/est-eng.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550?text=Fluorapatite+Precipitation+PDF';" alt="First Page - Fluorapatite Precipitation" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <a href="papers/est-eng.pdf" target="_blank" class="w-full bg-white text-darkText text-xs font-semibold uppercase tracking-wider py-2 rounded text-center shadow flex items-center justify-center gap-1.5">
+                <i data-lucide="eye" class="w-3.5 h-3.5 text-secondary"></i> Read Article[cite: 4]
               </a>
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div class="space-y-2">
               <div class="flex items-center justify-between">
-                <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold">2024</span>
-                <span class="text-[10px] font-semibold text-secondary uppercase">ACS ES&T Engineering</span>
+                <span class="px-2 py-0.5 rounded bg-primary/10 text-primary dark:text-secondary text-[10px] font-bold">2024</span>
+                <span class="text-[10px] font-semibold text-secondary uppercase tracking-widest">ACS ES&T Engineering</span>
               </div>
-              <h3 class="text-sm font-bold font-heading text-darkText dark:text-white line-clamp-2">Kinetics of Fluorapatite Precipitation in Fluoride-Contaminated Water</h3>
-              <p class="text-xs text-gray-500 line-clamp-2">Aravinth Siva Subramaniam Ekamparam, Surya Sujathan, Abhas Singh</p>
+              <h3 class="text-sm font-bold font-classic text-darkText dark:text-white line-clamp-2">Kinetics of Fluorapatite Precipitation in Fluoride-Contaminated Water</h3>
+              <p class="text-xs text-stone-500 font-light line-clamp-2">Aravinth Siva Subramaniam Ekamparam, Surya Sujathan, Abhas Singh</p>
             </div>
-            <div class="pt-2 border-t border-gray-200/50 dark:border-gray-700/50 flex gap-2">
-              <a href="papers/est-eng.pdf" target="_blank" class="flex-1 text-[11px] font-medium text-white bg-primary hover:bg-primary/90 py-2 rounded-xl text-center flex items-center justify-center gap-1 shadow-sm transition">
-                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> First Page
+            <div class="pt-2 border-t border-stone-200/50 dark:border-stone-800 flex gap-2">
+              <a href="papers/est-eng.pdf" target="_blank" class="flex-1 text-[11px] font-semibold uppercase tracking-wider text-stone-100 bg-primary hover:bg-primary/90 py-2 rounded text-center flex items-center justify-center gap-1 transition">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-secondary"></i> First Page
               </a>
-              <a href="https://doi.org/10.1021/acsestengg.4c00235" target="_blank" class="px-3 text-[11px] font-medium text-primary bg-white dark:bg-darkBg py-2 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-center">
+              <a href="https://doi.org/10.1021/acsestengg.4c00235" target="_blank" class="px-3 text-[11px] font-medium text-secondary bg-white dark:bg-darkBg py-2 rounded border border-stone-200 dark:border-stone-800 flex items-center justify-center">
                 <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
               </a>
             </div>
@@ -383,119 +384,29 @@
         </div>
 
         <!-- Tile 3: Chem -->
-        <div class="pub-card rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/40 transition-all flex flex-col overflow-hidden group" data-category="Water Treatment" data-text="relative extents mechanisms and kinetics of fluoride removal from synthetic groundwater by prevalent sorbents chemosphere ekamparam khaitan nimesh singh chem">
-          <div class="relative h-64 overflow-hidden bg-gray-100 dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 flex items-center justify-center">
-            <img src="papers/Chem.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550?text=Paper+Preview+Page+1';" alt="First Page - Fluoride Removal Kinetics" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-              <a href="papers/Chem.pdf" target="_blank" class="w-full bg-white text-darkText text-xs font-bold py-2 rounded-lg text-center shadow flex items-center justify-center gap-1">
-                <i data-lucide="eye" class="w-3.5 h-3.5"></i> Open Full PDF
+        <div class="pub-card rounded-lg bg-bgLight dark:bg-darkCard border border-stone-200/80 dark:border-stone-800 shadow-soft hover:shadow-xl hover:border-secondary/50 transition-all flex flex-col overflow-hidden group" data-category="Water Treatment" data-text="relative extents mechanisms and kinetics of fluoride removal from synthetic groundwater by prevalent sorbents chemosphere ekamparam khaitan nimesh singh chem">
+          <div class="relative h-60 overflow-hidden bg-stone-100 dark:bg-stone-900 border-b border-stone-200/60 dark:border-stone-800 flex items-center justify-center">
+            <img src="papers/Chem.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550?text=Fluoride+Removal+PDF';" alt="First Page - Fluoride Removal Kinetics" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <a href="papers/Chem.pdf" target="_blank" class="w-full bg-white text-darkText text-xs font-semibold uppercase tracking-wider py-2 rounded text-center shadow flex items-center justify-center gap-1.5">
+                <i data-lucide="eye" class="w-3.5 h-3.5 text-secondary"></i> Read Article[cite: 4]
               </a>
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div class="space-y-2">
               <div class="flex items-center justify-between">
-                <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold">2023</span>
-                <span class="text-[10px] font-semibold text-secondary uppercase">Chemosphere</span>
+                <span class="px-2 py-0.5 rounded bg-primary/10 text-primary dark:text-secondary text-[10px] font-bold">2023</span>
+                <span class="text-[10px] font-semibold text-secondary uppercase tracking-widest">Chemosphere</span>
               </div>
-              <h3 class="text-sm font-bold font-heading text-darkText dark:text-white line-clamp-2">Relative Extents, Mechanisms, and Kinetics of Fluoride Removal from Synthetic Groundwater</h3>
-              <p class="text-xs text-gray-500 line-clamp-2">A. S. S. Ekamparam, Harshit Khaitan, Vishakha Nimesh, Abhas Singh</p>
+              <h3 class="text-sm font-bold font-classic text-darkText dark:text-white line-clamp-2">Relative Extents, Mechanisms, and Kinetics of Fluoride Removal from Synthetic Groundwater</h3>
+              <p class="text-xs text-stone-500 font-light line-clamp-2">A. S. S. Ekamparam, Harshit Khaitan, Vishakha Nimesh, Abhas Singh</p>
             </div>
-            <div class="pt-2 border-t border-gray-200/50 dark:border-gray-700/50 flex gap-2">
-              <a href="papers/Chem.pdf" target="_blank" class="flex-1 text-[11px] font-medium text-white bg-primary hover:bg-primary/90 py-2 rounded-xl text-center flex items-center justify-center gap-1 shadow-sm transition">
-                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> First Page
+            <div class="pt-2 border-t border-stone-200/50 dark:border-stone-800 flex gap-2">
+              <a href="papers/Chem.pdf" target="_blank" class="flex-1 text-[11px] font-semibold uppercase tracking-wider text-stone-100 bg-primary hover:bg-primary/90 py-2 rounded text-center flex items-center justify-center gap-1 transition">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-secondary"></i> First Page
               </a>
-              <a href="https://doi.org/10.1016/j.chemosphere.2023.140161" target="_blank" class="px-3 text-[11px] font-medium text-primary bg-white dark:bg-darkBg py-2 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-center">
-                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tile 4: acs-esc -->
-        <div class="pub-card rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/40 transition-all flex flex-col overflow-hidden group" data-category="Geochemistry" data-text="the role of manganese carbonate precipitation in controlling fluoride and uranium mobilization in groundwater acs earth and space chemistry mohapatra sujathan ekamparam singh acs-esc">
-          <div class="relative h-64 overflow-hidden bg-gray-100 dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 flex items-center justify-center">
-            <img src="papers/acs-esc.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550?text=Paper+Preview+Page+1';" alt="First Page - Role of Manganese Carbonate" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-              <a href="papers/acs-esc.pdf" target="_blank" class="w-full bg-white text-darkText text-xs font-bold py-2 rounded-lg text-center shadow flex items-center justify-center gap-1">
-                <i data-lucide="eye" class="w-3.5 h-3.5"></i> Open Full PDF
-              </a>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold">2021</span>
-                <span class="text-[10px] font-semibold text-secondary uppercase">ACS Earth & Space Chem</span>
-              </div>
-              <h3 class="text-sm font-bold font-heading text-darkText dark:text-white line-clamp-2">The Role of Manganese Carbonate Precipitation in Controlling Fluoride and Uranium Mobilization</h3>
-              <p class="text-xs text-gray-500 line-clamp-2">Ashwini Mohapatra, Surya Sujathan, A. S. S. Ekamparam, Abhas Singh</p>
-            </div>
-            <div class="pt-2 border-t border-gray-200/50 dark:border-gray-700/50 flex gap-2">
-              <a href="papers/acs-esc.pdf" target="_blank" class="flex-1 text-[11px] font-medium text-white bg-primary hover:bg-primary/90 py-2 rounded-xl text-center flex items-center justify-center gap-1 shadow-sm transition">
-                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> First Page
-              </a>
-              <a href="https://doi.org/10.1021/acsearthspacechem.1c00133" target="_blank" class="px-3 text-[11px] font-medium text-primary bg-white dark:bg-darkBg py-2 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-center">
-                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tile 5: GCA -->
-        <div class="pub-card rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/40 transition-all flex flex-col overflow-hidden group" data-category="Geochemistry" data-text="transformation of calcite to fluorapatite at room temperature impact of initial phosphate and fluoride concentrations geochimica et cosmochimica acta ekamparam singh gca">
-          <div class="relative h-64 overflow-hidden bg-gray-100 dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 flex items-center justify-center">
-            <img src="papers/GCA.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550?text=Paper+Preview+Page+1';" alt="First Page - Calcite to Fluorapatite Transformation" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-              <a href="papers/GCA.pdf" target="_blank" class="w-full bg-white text-darkText text-xs font-bold py-2 rounded-lg text-center shadow flex items-center justify-center gap-1">
-                <i data-lucide="eye" class="w-3.5 h-3.5"></i> Open Full PDF
-              </a>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold">2020</span>
-                <span class="text-[10px] font-semibold text-secondary uppercase">Geochim. Cosmochim. Acta</span>
-              </div>
-              <h3 class="text-sm font-bold font-heading text-darkText dark:text-white line-clamp-2">Transformation of Calcite to Fluorapatite at Room Temperature</h3>
-              <p class="text-xs text-gray-500 line-clamp-2">Aravinth Siva Subramaniam Ekamparam, Abhas Singh</p>
-            </div>
-            <div class="pt-2 border-t border-gray-200/50 dark:border-gray-700/50 flex gap-2">
-              <a href="papers/GCA.pdf" target="_blank" class="flex-1 text-[11px] font-medium text-white bg-primary hover:bg-primary/90 py-2 rounded-xl text-center flex items-center justify-center gap-1 shadow-sm transition">
-                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> First Page
-              </a>
-              <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" class="px-3 text-[11px] font-medium text-primary bg-white dark:bg-darkBg py-2 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-center">
-                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tile 6: CBM -->
-        <div class="pub-card rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl hover:border-primary/40 transition-all flex flex-col overflow-hidden group" data-category="Water Treatment" data-text="activated alumina sludge as partial substitute for fine aggregates in brick making construction and building materials pokhara ekamparam gupta rai singh cbm">
-          <div class="relative h-64 overflow-hidden bg-gray-100 dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 flex items-center justify-center">
-            <img src="papers/CBM.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550?text=Paper+Preview+Page+1';" alt="First Page - Activated Alumina Sludge Bricks" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-              <a href="papers/CBM.pdf" target="_blank" class="w-full bg-white text-darkText text-xs font-bold py-2 rounded-lg text-center shadow flex items-center justify-center gap-1">
-                <i data-lucide="eye" class="w-3.5 h-3.5"></i> Open Full PDF
-              </a>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold">2019</span>
-                <span class="text-[10px] font-semibold text-secondary uppercase">Constr. Build. Mater.</span>
-              </div>
-              <h3 class="text-sm font-bold font-heading text-darkText dark:text-white line-clamp-2">Activated Alumina Sludge as Partial Substitute for Fine Aggregates in Brick Making</h3>
-              <p class="text-xs text-gray-500 line-clamp-2">P. Pokhara, A. S. S. Ekamparam, A. B. Gupta, D. C. Rai, A. Singh</p>
-            </div>
-            <div class="pt-2 border-t border-gray-200/50 dark:border-gray-700/50 flex gap-2">
-              <a href="papers/CBM.pdf" target="_blank" class="flex-1 text-[11px] font-medium text-white bg-primary hover:bg-primary/90 py-2 rounded-xl text-center flex items-center justify-center gap-1 shadow-sm transition">
-                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> First Page
-              </a>
-              <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" class="px-3 text-[11px] font-medium text-primary bg-white dark:bg-darkBg py-2 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-center">
+              <a href="https://doi.org/10.1016/j.chemosphere.2023.140161" target="_blank" class="px-3 text-[11px] font-medium text-secondary bg-white dark:bg-darkBg py-2 rounded border border-stone-200 dark:border-stone-800 flex items-center justify-center">
                 <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
               </a>
             </div>
@@ -503,30 +414,6 @@
         </div>
 
       </div>
-
-      <!-- Manuscripts & Conference Presentations -->
-      <div class="mt-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800">
-          <h4 class="text-sm font-bold font-heading text-primary uppercase tracking-wider mb-3 flex items-center gap-2">
-            <i data-lucide="clock" class="w-4 h-4"></i> Under Review
-          </h4>
-          <p class="text-xs text-gray-700 dark:text-gray-300 leading-relaxed">
-            <strong>Kumar et al. (including Ekamparam, A. S. S.):</strong> Mineralogical and Geochemical Characterization of Sediments in Perspective of Arsenic Source and Mobilization in Shallow Alluvial Aquifers of Central Ganga Basin, India.
-          </p>
-        </div>
-
-        <div class="p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800">
-          <h4 class="text-sm font-bold font-heading text-secondary uppercase tracking-wider mb-3 flex items-center gap-2">
-            <i data-lucide="presentation" class="w-4 h-4"></i> Selected Conference Highlights
-          </h4>
-          <ul class="text-xs text-gray-700 dark:text-gray-300 space-y-2">
-            <li>• <strong>SSSA Khirkham (Fukushima 2025):</strong> Deep Vadose Sense: Bridging Sensing & Modeling.</li>
-            <li>• <strong>AGU Fall Meetings (Washington D.C. 2024 & SF 2023):</strong> Managed Aquifer Recharge & Drywell Clogging.</li>
-            <li>• <strong>Goldschmidt (2021 & 2018):</strong> Calcite-to-Fluorapatite Flow Kinetics (Boston & Virtual).</li>
-          </ul>
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -534,308 +421,143 @@
   <section id="projects" class="py-24 bg-bgLight dark:bg-darkBg">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider">Engineering & Research</span>
-        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-darkText dark:text-white">Applied Projects & Funded Grants</h2>
+        <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-semibold uppercase tracking-widest">Engineering & Research[cite: 4]</span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-classic text-darkText dark:text-white">Applied Projects & Funded Grants</h2>
       </div>
 
-      <!-- Funded Grants Banner -->
+      <!-- Funded Grants -->
       <div class="mb-12 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 flex flex-col justify-between">
+        <div class="p-7 rounded-lg bg-white dark:bg-darkCard border border-stone-200/80 dark:border-stone-800 flex flex-col justify-between shadow-soft">
           <div>
-            <span class="text-[10px] font-bold text-primary uppercase tracking-wider">Competitive Grant • OSU (2025 - 2026)</span>
-            <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">Smart Groundwater Recharge: USA-India Framework</h3>
-            <p class="text-xs text-gray-600 dark:text-gray-300 mt-2">Trans-disciplinary framework for eco-resilient groundwater sustainability, flood mitigation, and irrigation security.</p>
+            <span class="text-[10px] font-bold text-secondary uppercase tracking-widest">Competitive Grant • OSU (2025 - 2026)[cite: 4]</span>
+            <h3 class="text-lg font-bold font-classic text-darkText dark:text-white mt-1">Smart Groundwater Recharge: USA-India Framework</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-300 mt-2 font-light">Trans-disciplinary framework for eco-resilient groundwater sustainability, flood mitigation, and irrigation security[cite: 4].</p>
           </div>
-          <div class="mt-4 flex justify-between items-center text-xs font-semibold">
-            <span class="text-gray-500">Role: Co-Investigator</span>
-            <span class="text-primary font-bold">Budget: USD $50,000</span>
+          <div class="mt-5 flex justify-between items-center text-xs font-semibold border-t border-stone-100 dark:border-stone-800 pt-3">
+            <span class="text-stone-500">Role: Co-Investigator[cite: 4]</span>
+            <span class="text-primary dark:text-secondary font-bold font-classic text-base">USD $50,000[cite: 4]</span>
           </div>
         </div>
 
-        <div class="p-6 rounded-2xl bg-gradient-to-r from-secondary/10 to-accent/10 border border-secondary/20 flex flex-col justify-between">
+        <div class="p-7 rounded-lg bg-white dark:bg-darkCard border border-stone-200/80 dark:border-stone-800 flex flex-col justify-between shadow-soft">
           <div>
-            <span class="text-[10px] font-bold text-secondary uppercase tracking-wider">Agricultural Research Foundation Grant (2025 - 2027)</span>
-            <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">Water Treatment & Soil Health in Agrivoltaics</h3>
-            <p class="text-xs text-gray-600 dark:text-gray-300 mt-2">Optimizing harvested water quality and soil health for sustainable agriculture and drywell MAR systems in Oregon.</p>
+            <span class="text-[10px] font-bold text-secondary uppercase tracking-widest">ARF Grant (2025 - 2027)[cite: 4]</span>
+            <h3 class="text-lg font-bold font-classic text-darkText dark:text-white mt-1">Water Treatment & Soil Health in Agrivoltaics</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-300 mt-2 font-light">Optimizing harvested water quality and soil health for sustainable agriculture and drywell MAR systems in Oregon[cite: 4].</p>
           </div>
-          <div class="mt-4 flex justify-between items-center text-xs font-semibold">
-            <span class="text-gray-500">Role: Co-Investigator</span>
-            <span class="text-secondary font-bold">Budget: USD $15,000</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Applied Work Experience Projects -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Project 1 -->
-        <div class="rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 overflow-hidden shadow-soft flex flex-col">
-          <div class="h-36 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center p-6 border-b border-gray-100 dark:border-gray-800">
-            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">NWREC Oregon Field Site</span>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <span class="text-[10px] font-bold text-secondary uppercase">2023 - 2025</span>
-              <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">Drywell Managed Aquifer Recharge</h3>
-              <p class="text-xs text-gray-600 dark:text-gray-300 mt-2">Installed drywells, vadose zone wells, and multi-sensor systems at NWREC. Completed initial recharge trial with 10,000 gallons of water.</p>
-            </div>
-            <div class="flex flex-wrap gap-1">
-              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">Sensors</span>
-              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">Field Trial</span>
-            </div>
+          <div class="mt-5 flex justify-between items-center text-xs font-semibold border-t border-stone-100 dark:border-stone-800 pt-3">
+            <span class="text-stone-500">Role: Co-Investigator[cite: 4]</span>
+            <span class="text-primary dark:text-secondary font-bold font-classic text-base">USD $15,000[cite: 4]</span>
           </div>
         </div>
-
-        <!-- Project 2 -->
-        <div class="rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 overflow-hidden shadow-soft flex flex-col">
-          <div class="h-36 bg-gradient-to-br from-secondary/10 to-accent/10 flex items-center justify-center p-6 border-b border-gray-100 dark:border-gray-800">
-            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Agrivoltaics & Solar Harvesting</span>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <span class="text-[10px] font-bold text-secondary uppercase">2024 - 2025</span>
-              <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">Solar Panel Collected Water for MAR</h3>
-              <p class="text-xs text-gray-600 dark:text-gray-300 mt-2">Engineered rainwater harvesting integrated with solar-tracking agrivoltaics for MAR diversion. Conducted non-targeted water analyses.</p>
-            </div>
-            <div class="flex flex-wrap gap-1">
-              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">Agrivoltaics</span>
-              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">Rainwater</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 overflow-hidden shadow-soft flex flex-col">
-          <div class="h-36 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center p-6 border-b border-gray-100 dark:border-gray-800">
-            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Pretreatment & Column Tests</span>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <span class="text-[10px] font-bold text-secondary uppercase">2022 - 2025</span>
-              <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">Pretreatment Unit for Drywell MAR</h3>
-              <p class="text-xs text-gray-600 dark:text-gray-300 mt-2">Physical clogging column experiments at 250-7000 FNU turbidity. Developed optimized backflushing & sacrificial sand media replacement.</p>
-            </div>
-            <div class="flex flex-wrap gap-1">
-              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">Clogging</span>
-              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">Backflushing</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 overflow-hidden shadow-soft flex flex-col">
-          <div class="h-36 bg-gradient-to-br from-accent/10 to-primary/10 flex items-center justify-center p-6 border-b border-gray-100 dark:border-gray-800">
-            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Industrial Wastewater</span>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <span class="text-[10px] font-bold text-secondary uppercase">Jul 2022 - Sep 2022</span>
-              <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">Metal Polishing Wastewater Treatment</h3>
-              <p class="text-xs text-gray-600 dark:text-gray-300 mt-2">Developed point-of-use treatment strategies for high-strength wastewater (COD 300,000 mg/L), achieving 90% COD reduction in preliminary trials.</p>
-            </div>
-            <div class="flex flex-wrap gap-1">
-              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">High COD</span>
-              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">90% Reduction</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 overflow-hidden shadow-soft flex flex-col">
-          <div class="h-36 bg-gradient-to-br from-secondary/10 to-primary/10 flex items-center justify-center p-6 border-b border-gray-100 dark:border-gray-800">
-            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Subsurface Hydrogeochemistry</span>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <span class="text-[10px] font-bold text-secondary uppercase">2023 - 2025</span>
-              <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">Clackamas County Nitrate Aquifer</h3>
-              <p class="text-xs text-gray-600 dark:text-gray-300 mt-2">Soil core leaching & multi-year groundwater monitoring in Oregon to determine Mn and Fe mobilization mechanisms under nitrate-rich conditions.</p>
-            </div>
-            <div class="flex flex-wrap gap-1">
-              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">Nitrate</span>
-              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">Mn/Fe Leaching</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 overflow-hidden shadow-soft flex flex-col">
-          <div class="h-36 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center p-6 border-b border-gray-100 dark:border-gray-800">
-            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Industrial Soil Remediation</span>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <span class="text-[10px] font-bold text-secondary uppercase">Feb 2021 - Jul 2021</span>
-              <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">COPR Soil Characterization</h3>
-              <p class="text-xs text-gray-600 dark:text-gray-300 mt-2">Geochemical characterization of Chromium Ore Processing Residue (COPR) soils across depth profiles to guide industrial remediation planning.</p>
-            </div>
-            <div class="flex flex-wrap gap-1">
-              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">Chromium</span>
-              <span class="text-[10px] bg-bgLight dark:bg-darkBg px-2 py-1 rounded text-gray-500">Soil Profiles</span>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Technical Skills & Instrumentation -->
-  <section id="skills" class="py-24 bg-white dark:bg-darkCard/30 border-t border-gray-100 dark:border-gray-800">
+  <!-- Technical Toolkit -->
+  <section id="skills" class="py-24 bg-white dark:bg-darkCard/30 border-t border-stone-200/70 dark:border-stone-800">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-semibold uppercase tracking-wider">Technical Toolkit</span>
-        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-darkText dark:text-white">Instrumentation & Software Skills</h2>
+        <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-semibold uppercase tracking-widest">Capabilities[cite: 4]</span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-classic text-darkText dark:text-white">Instrumentation & Software Skills</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        
-        <!-- Instrumentation -->
-        <div class="p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 space-y-4">
-          <div class="flex items-center space-x-3 text-primary">
-            <i data-lucide="cpu" class="w-6 h-6"></i>
-            <h3 class="text-base font-bold font-heading text-darkText dark:text-white">Analytical Instrumentation</h3>
+        <div class="p-7 rounded-lg bg-bgLight dark:bg-darkCard border border-stone-200/80 dark:border-stone-800 space-y-4">
+          <div class="flex items-center space-x-3 text-primary dark:text-secondary">
+            <i data-lucide="cpu" class="w-5 h-5"></i>
+            <h3 class="text-lg font-bold font-classic text-darkText dark:text-white">Analytical Instrumentation</h3>
           </div>
-          <ul class="text-xs text-gray-600 dark:text-gray-300 space-y-2">
-            <li>• <strong>ICP-MS / ICP-OES:</strong> Thermo ICAP RQ, trace element analysis</li>
-            <li>• <strong>SEAL AQ300:</strong> Aqueous nitrate, ammonium & phosphate</li>
-            <li>• <strong>MP-AES & IC-ICP-MS:</strong> Cr and As speciation</li>
-            <li>• <strong>Particle Characterization:</strong> DLS, Zeta potential, Grain size</li>
-            <li>• <strong>Sensors & Loggers:</strong> Pressure, Turbidity, Conductive level</li>
+          <ul class="text-xs text-stone-600 dark:text-stone-300 space-y-2.5 font-light">
+            <li>• <strong>ICP-MS / ICP-OES:</strong> Thermo ICAP RQ, trace element analysis[cite: 4]</li>
+            <li>• <strong>SEAL AQ300:</strong> Aqueous nitrate, ammonium & phosphate[cite: 4]</li>
+            <li>• <strong>MP-AES & IC-ICP-MS:</strong> Cr and As speciation[cite: 4]</li>
+            <li>• <strong>Particle Characterization:</strong> DLS, Zeta potential, Grain size[cite: 4]</li>
           </ul>
         </div>
 
-        <!-- Solid Phase & Geochemical Software -->
-        <div class="p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 space-y-4">
+        <div class="p-7 rounded-lg bg-bgLight dark:bg-darkCard border border-stone-200/80 dark:border-stone-800 space-y-4">
           <div class="flex items-center space-x-3 text-secondary">
-            <i data-lucide="binary" class="w-6 h-6"></i>
-            <h3 class="text-base font-bold font-heading text-darkText dark:text-white">Solid Phase & Geochemistry</h3>
+            <i data-lucide="binary" class="w-5 h-5"></i>
+            <h3 class="text-lg font-bold font-classic text-darkText dark:text-white">Solid Phase & Geochemistry</h3>
           </div>
-          <ul class="text-xs text-gray-600 dark:text-gray-300 space-y-2">
-            <li>• <strong>XRD Analysis:</strong> MAUD & JADE (Rietveld refinement)</li>
-            <li>• <strong>XPS Analysis:</strong> CasaXPS (Semi-quantitative elemental)</li>
-            <li>• <strong>HRTEM-SAED:</strong> GATAN image analysis</li>
-            <li>• <strong>Geochemical Software:</strong> Visual MINTEQ, Mineql+, Geochemists Workbench</li>
-            <li>• <strong>CFD & Structural:</strong> Fluent, ANSYS, STAAD, AutoCAD</li>
+          <ul class="text-xs text-stone-600 dark:text-stone-300 space-y-2.5 font-light">
+            <li>• <strong>XRD Analysis:</strong> MAUD & JADE (Rietveld refinement)[cite: 4]</li>
+            <li>• <strong>XPS Analysis:</strong> CasaXPS (Semi-quantitative elemental)[cite: 4]</li>
+            <li>• <strong>HRTEM-SAED:</strong> GATAN image analysis[cite: 4]</li>
+            <li>• <strong>Geochemical Software:</strong> Visual MINTEQ, Mineql+, Geochemists Workbench[cite: 4]</li>
           </ul>
         </div>
 
-        <!-- Programming & Data -->
-        <div class="p-6 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 space-y-4">
-          <div class="flex items-center space-x-3 text-accent">
-            <i data-lucide="code" class="w-6 h-6"></i>
-            <h3 class="text-base font-bold font-heading text-darkText dark:text-white">Computation & Software</h3>
+        <div class="p-7 rounded-lg bg-bgLight dark:bg-darkCard border border-stone-200/80 dark:border-stone-800 space-y-4">
+          <div class="flex items-center space-x-3 text-primary dark:text-secondary">
+            <i data-lucide="code" class="w-5 h-5"></i>
+            <h3 class="text-lg font-bold font-classic text-darkText dark:text-white">Computation & Software</h3>
           </div>
-          <ul class="text-xs text-gray-600 dark:text-gray-300 space-y-2">
-            <li>• <strong>Programming:</strong> Python (Basic), MATLAB (Basic), R (Beginner)</li>
-            <li>• <strong>Data Visualization:</strong> Origin, MS Excel</li>
-            <li>• <strong>Documentation:</strong> MS Word, MS PowerPoint</li>
-            <li>• <strong>Modeling:</strong> Runge-Kutta 4th Order reaction-transport modeling</li>
+          <ul class="text-xs text-stone-600 dark:text-stone-300 space-y-2.5 font-light">
+            <li>• <strong>Programming:</strong> Python (Basic), MATLAB (Basic), R (Beginner)[cite: 4]</li>
+            <li>• <strong>Data Visualization:</strong> Origin, MS Excel[cite: 4]</li>
+            <li>• <strong>Modeling:</strong> Runge-Kutta 4th Order reaction-transport modeling[cite: 4]</li>
+            <li>• <strong>CFD & Structural:</strong> Fluent, ANSYS, STAAD, AutoCAD[cite: 4]</li>
           </ul>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Career Experience & Education Timeline -->
-  <section id="experience" class="py-24 bg-bgLight dark:bg-darkBg border-t border-gray-100 dark:border-gray-800">
+  <!-- Career Experience -->
+  <section id="experience" class="py-24 bg-bgLight dark:bg-darkBg border-t border-stone-200/70 dark:border-stone-800">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-semibold uppercase tracking-wider">Career Journey</span>
-        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-darkText dark:text-white">Professional Experience & Education</h2>
+        <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-semibold uppercase tracking-widest">Chronology[cite: 4]</span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-classic text-darkText dark:text-white">Career Experience & Education</h2>
       </div>
 
       <div class="relative max-w-4xl mx-auto">
-        <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-800 -translate-x-1/2"></div>
+        <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-stone-200 dark:bg-stone-800 -translate-x-1/2"></div>
         <div class="space-y-12">
 
           <!-- Item 1: Detoxyfi -->
           <div class="relative flex flex-col md:flex-row items-start">
-            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 z-10 w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center border-4 border-white dark:border-darkBg shadow">
+            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 z-10 w-9 h-9 rounded-full bg-primary text-secondary flex items-center justify-center border-4 border-bgLight dark:border-darkBg shadow">
               <i data-lucide="briefcase" class="w-4 h-4"></i>
             </div>
             <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8 w-full">
-              <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft">
-                <span class="text-xs font-bold text-primary uppercase">Detoxyfi Technologies Pvt. Ltd., India</span>
-                <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">Research Scientist</h3>
-                <span class="text-[11px] text-gray-500 block mb-3">May 2026 - Present</span>
-                <p class="text-xs text-gray-600 dark:text-gray-300">Leading research on complex water matrices, geochemical characterisation, and commercial water treatment technologies.</p>
+              <div class="p-6 rounded-lg bg-white dark:bg-darkCard border border-stone-200/80 dark:border-stone-800 shadow-soft">
+                <span class="text-xs font-bold text-secondary uppercase tracking-wider">Research Scientist[cite: 4]</span>
+                <h3 class="text-base font-bold font-classic text-darkText dark:text-white mt-1">Detoxyfi Technologies Pvt. Ltd., India[cite: 4]</h3>
+                <span class="text-[11px] text-stone-500 block mb-3 font-light">May 2026 - Present[cite: 4]</span>
+                <p class="text-xs text-stone-600 dark:text-stone-300 font-light">Leading applied research on complex water matrices, geochemical characterisation, and commercial water treatment technologies[cite: 4].</p>
               </div>
             </div>
           </div>
 
           <!-- Item 2: OSU Postdoc -->
           <div class="relative flex flex-col md:flex-row items-start md:flex-row-reverse">
-            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 z-10 w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center border-4 border-white dark:border-darkBg shadow">
+            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 z-10 w-9 h-9 rounded-full bg-primary text-secondary flex items-center justify-center border-4 border-bgLight dark:border-darkBg shadow">
               <i data-lucide="microscope" class="w-4 h-4"></i>
             </div>
             <div class="ml-12 md:ml-0 md:w-1/2 md:pl-8 w-full">
-              <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft">
-                <span class="text-xs font-bold text-primary uppercase">Oregon State University, USA</span>
-                <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">Postdoctoral Scholar</h3>
-                <span class="text-[11px] text-gray-500 block mb-3">Oct 2022 - Oct 2025 • Supervisor: Dr. Salini Sasidharan</span>
-                <p class="text-xs text-gray-600 dark:text-gray-300">Researched drywell MAR systems, column physical clogging dynamics, agrivoltaic rainwater collection, and nitrate aquifer biogeochemistry.</p>
+              <div class="p-6 rounded-lg bg-white dark:bg-darkCard border border-stone-200/80 dark:border-stone-800 shadow-soft">
+                <span class="text-xs font-bold text-secondary uppercase tracking-wider">Postdoctoral Scholar[cite: 4]</span>
+                <h3 class="text-base font-bold font-classic text-darkText dark:text-white mt-1">Oregon State University, USA[cite: 4]</h3>
+                <span class="text-[11px] text-stone-500 block mb-3 font-light">Oct 2022 - Oct 2025 • Supervisor: Dr. Salini Sasidharan[cite: 4]</span>
+                <p class="text-xs text-stone-600 dark:text-stone-300 font-light">Researched drywell MAR systems, column physical clogging dynamics, agrivoltaic rainwater collection, and nitrate aquifer biogeochemistry[cite: 4].</p>
               </div>
             </div>
           </div>
 
-          <!-- Item 3: IIT Madras -->
+          <!-- Item 3: IIT Kanpur PhD -->
           <div class="relative flex flex-col md:flex-row items-start">
-            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 z-10 w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center border-4 border-white dark:border-darkBg shadow">
-              <i data-lucide="briefcase" class="w-4 h-4"></i>
-            </div>
-            <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8 w-full">
-              <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft">
-                <span class="text-xs font-bold text-primary uppercase">IIT Madras, India</span>
-                <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">Project Manager</h3>
-                <span class="text-[11px] text-gray-500 block mb-3">Jul 2022 - Sep 2022 • Supervisor: Dr. Ligy Philip</span>
-                <p class="text-xs text-gray-600 dark:text-gray-300">Managed point-of-use wastewater treatment project for metal polishing industry achieving 90% COD reduction.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 4: NIT Tiruchirappalli -->
-          <div class="relative flex flex-col md:flex-row items-start md:flex-row-reverse">
-            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 z-10 w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center border-4 border-white dark:border-darkBg shadow">
-              <i data-lucide="book-open" class="w-4 h-4"></i>
-            </div>
-            <div class="ml-12 md:ml-0 md:w-1/2 md:pl-8 w-full">
-              <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft">
-                <span class="text-xs font-bold text-primary uppercase">NIT Tiruchirappalli, India</span>
-                <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">Temporary Faculty</h3>
-                <span class="text-[11px] text-gray-500 block mb-3">Aug 2021 - May 2022</span>
-                <p class="text-xs text-gray-600 dark:text-gray-300">Taught undergraduate & graduate courses (Air Pollution & Industrial Wastewater achieved perfect 5/5 teacher evaluations).</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 5: IIT Kanpur PhD -->
-          <div class="relative flex flex-col md:flex-row items-start">
-            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 z-10 w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center border-4 border-white dark:border-darkBg shadow">
+            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 z-10 w-9 h-9 rounded-full bg-primary text-secondary flex items-center justify-center border-4 border-bgLight dark:border-darkBg shadow">
               <i data-lucide="graduation-cap" class="w-4 h-4"></i>
             </div>
             <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8 w-full">
-              <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft">
-                <span class="text-xs font-bold text-primary uppercase">IIT Kanpur, Kanpur, India</span>
-                <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">Ph.D. in Environmental Engineering</h3>
-                <span class="text-[11px] text-gray-500 block mb-3">2014 - 2021 • Advisor: Dr. Abhas Singh</span>
-                <p class="text-xs text-gray-600 dark:text-gray-300">Dissertation: <em>"Investigation of processes governing fluoride removal from water by calcium-based amendments."</em> Also served as Senior Project Scientist (Feb-Aug 2021).</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 6: Master's & Bachelor's -->
-          <div class="relative flex flex-col md:flex-row items-start md:flex-row-reverse">
-            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 z-10 w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center border-4 border-white dark:border-darkBg shadow">
-              <i data-lucide="award" class="w-4 h-4"></i>
-            </div>
-            <div class="ml-12 md:ml-0 md:w-1/2 md:pl-8 w-full">
-              <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft">
-                <span class="text-xs font-bold text-primary uppercase">Anna University, Chennai, India</span>
-                <h3 class="text-base font-bold font-heading text-darkText dark:text-white mt-1">M.E. & B.E. Degrees</h3>
-                <span class="text-[11px] text-gray-500 block mb-3">2008 - 2014</span>
-                <p class="text-xs text-gray-600 dark:text-gray-300">• <strong>M.E. Environmental Engg (2012-2014):</strong> Overall 3rd Rank; As(V) aquifer transport modeling.<br>• <strong>B.E. Civil Engg (2008-2012):</strong> Overall 3rd Rank; Ductile earthquake-resistant structural design.</p>
+              <div class="p-6 rounded-lg bg-white dark:bg-darkCard border border-stone-200/80 dark:border-stone-800 shadow-soft">
+                <span class="text-xs font-bold text-secondary uppercase tracking-wider">Ph.D. in Environmental Engineering[cite: 4]</span>
+                <h3 class="text-base font-bold font-classic text-darkText dark:text-white mt-1">IIT Kanpur, India[cite: 4]</h3>
+                <span class="text-[11px] text-stone-500 block mb-3 font-light">2014 - 2021 • Advisor: Dr. Abhas Singh[cite: 4]</span>
+                <p class="text-xs text-stone-600 dark:text-stone-300 font-light">Dissertation on the processes governing fluoride removal from water by calcium-based amendments[cite: 4].</p>
               </div>
             </div>
           </div>
@@ -846,54 +568,54 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-24 bg-white dark:bg-darkCard/30 border-t border-gray-100 dark:border-gray-800">
+  <section id="contact" class="py-24 bg-white dark:bg-darkCard/30 border-t border-stone-200/70 dark:border-stone-800">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider">Collaboration</span>
-        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-darkText dark:text-white">Get In Touch</h2>
+        <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-semibold uppercase tracking-widest">Connect[cite: 4]</span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-classic text-darkText dark:text-white">Get In Touch</h2>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
         <div class="lg:col-span-5 space-y-6">
-          <div class="p-8 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft space-y-6">
-            <h3 class="text-lg font-bold font-heading text-darkText dark:text-white">Contact Info</h3>
+          <div class="p-8 rounded-lg bg-bgLight dark:bg-darkCard border border-stone-200/80 dark:border-stone-800 shadow-soft space-y-6">
+            <h3 class="text-xl font-bold font-classic text-darkText dark:text-white">Direct Information</h3>
             
-            <div class="space-y-4 text-xs font-medium">
-              <a href="mailto:aravinthekamparam@gmail.com" class="flex items-center space-x-3 text-gray-600 dark:text-gray-300 hover:text-primary">
-                <i data-lucide="mail" class="w-4 h-4 text-primary shrink-0"></i>
+            <div class="space-y-4 text-xs font-light">
+              <a href="mailto:aravinthekamparam@gmail.com" class="flex items-center space-x-3 text-stone-600 dark:text-stone-300 hover:text-secondary">
+                <i data-lucide="mail" class="w-4 h-4 text-secondary shrink-0"></i>
                 <span>aravinthekamparam@gmail.com</span>
               </a>
-              <a href="tel:+918903656204" class="flex items-center space-x-3 text-gray-600 dark:text-gray-300 hover:text-primary">
-                <i data-lucide="phone" class="w-4 h-4 text-primary shrink-0"></i>
+              <a href="tel:+918903656204" class="flex items-center space-x-3 text-stone-600 dark:text-stone-300 hover:text-secondary">
+                <i data-lucide="phone" class="w-4 h-4 text-secondary shrink-0"></i>
                 <span>+91 89036 56204</span>
               </a>
-              <div class="flex items-center space-x-3 text-gray-600 dark:text-gray-300">
-                <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0"></i>
-                <span>India</span>
+              <div class="flex items-center space-x-3 text-stone-600 dark:text-stone-300">
+                <i data-lucide="map-pin" class="w-4 h-4 text-secondary shrink-0"></i>
+                <span>India[cite: 4]</span>
               </div>
             </div>
 
-            <div class="pt-2 flex flex-col gap-3">
-              <button id="downloadVCard" class="w-full bg-primary hover:bg-primary/90 text-white text-xs font-semibold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
-                <i data-lucide="download" class="w-4 h-4"></i>
+            <div class="pt-3">
+              <button id="downloadVCard" class="w-full bg-primary hover:bg-primary/95 text-stone-100 text-xs uppercase tracking-wider font-semibold py-3 rounded border border-secondary/30 flex items-center justify-center space-x-2 transition">
+                <i data-lucide="download" class="w-4 h-4 text-secondary"></i>
                 <span>Download vCard Contact</span>
               </button>
             </div>
           </div>
         </div>
 
-        <div class="lg:col-span-7 p-8 rounded-2xl bg-bgLight dark:bg-darkCard border border-gray-100 dark:border-gray-800 shadow-soft">
-          <h3 class="text-lg font-bold font-heading text-darkText dark:text-white mb-6">Send a Message</h3>
+        <div class="lg:col-span-7 p-8 rounded-lg bg-bgLight dark:bg-darkCard border border-stone-200/80 dark:border-stone-800 shadow-soft">
+          <h3 class="text-xl font-bold font-classic text-darkText dark:text-white mb-6">Send an Inquiry</h3>
           <form id="contactForm" class="space-y-4">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input type="text" required placeholder="Your Name" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg text-xs focus:outline-none focus:border-primary">
-              <input type="email" required placeholder="Your Email" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg text-xs focus:outline-none focus:border-primary">
+              <input type="text" required placeholder="Your Name" class="w-full px-4 py-3 rounded border border-stone-200 dark:border-stone-700 bg-white dark:bg-darkBg text-xs focus:outline-none focus:border-secondary">
+              <input type="email" required placeholder="Your Email" class="w-full px-4 py-3 rounded border border-stone-200 dark:border-stone-700 bg-white dark:bg-darkBg text-xs focus:outline-none focus:border-secondary">
             </div>
-            <input type="text" required placeholder="Subject" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg text-xs focus:outline-none focus:border-primary">
-            <textarea rows="4" required placeholder="Message" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg text-xs focus:outline-none focus:border-primary"></textarea>
-            <button type="submit" class="bg-primary text-white text-xs font-semibold px-6 py-3 rounded-xl flex items-center space-x-2 hover:bg-primary/90 transition">
-              <i data-lucide="send" class="w-4 h-4"></i>
-              <span>Send Inquiry</span>
+            <input type="text" required placeholder="Subject" class="w-full px-4 py-3 rounded border border-stone-200 dark:border-stone-700 bg-white dark:bg-darkBg text-xs focus:outline-none focus:border-secondary">
+            <textarea rows="4" required placeholder="Message" class="w-full px-4 py-3 rounded border border-stone-200 dark:border-stone-700 bg-white dark:bg-darkBg text-xs focus:outline-none focus:border-secondary"></textarea>
+            <button type="submit" class="bg-primary text-stone-100 text-xs uppercase tracking-wider font-semibold px-7 py-3 rounded flex items-center space-x-2 hover:bg-primary/90 border border-secondary/30 transition">
+              <i data-lucide="send" class="w-4 h-4 text-secondary"></i>
+              <span>Send Message</span>
             </button>
           </form>
         </div>
@@ -902,12 +624,12 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-8 bg-white dark:bg-darkBg border-t border-gray-100 dark:border-gray-800 text-center text-xs text-gray-500">
+  <footer class="py-8 bg-white dark:bg-darkBg border-t border-stone-200/70 dark:border-stone-800 text-center text-xs text-stone-500 font-light">
     <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-      <div>© 2026 Dr. Aravinth Siva Subramaniam Ekamparam, Ph.D. All rights reserved.</div>
-      <div class="flex space-x-4">
-        <a href="https://www.linkedin.com/in/aravinth-ekamparam/" target="_blank" class="hover:text-primary">LinkedIn</a>
-        <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" class="hover:text-primary">Google Scholar</a>
+      <div>© 2026 Dr. Aravinth Siva Subramaniam Ekamparam, Ph.D. All rights reserved.[cite: 4]</div>
+      <div class="flex space-x-6 uppercase tracking-wider text-[11px]">
+        <a href="https://www.linkedin.com/in/aravinth-ekamparam/" target="_blank" class="hover:text-secondary transition">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=HnXiws4AAAAJ&hl=en" target="_blank" class="hover:text-secondary transition">Google Scholar</a>
       </div>
     </div>
   </footer>
@@ -916,7 +638,7 @@
   <script>
     lucide.createIcons();
 
-    // Dark Mode Toggle
+    // Dark Mode
     const darkToggle = document.getElementById('darkToggle');
     const darkToggleMobile = document.getElementById('darkToggleMobile');
     function toggleTheme() {
@@ -925,14 +647,14 @@
     darkToggle?.addEventListener('click', toggleTheme);
     darkToggleMobile?.addEventListener('click', toggleTheme);
 
-    // Mobile Menu Drawer
+    // Mobile Menu
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileDrawer = document.getElementById('mobileDrawer');
     mobileMenuBtn?.addEventListener('click', () => {
       mobileDrawer.classList.toggle('hidden');
     });
 
-    // Scroll Progress Indicator
+    // Scroll Progress
     window.addEventListener('scroll', () => {
       const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -941,16 +663,15 @@
 
       const navbar = document.getElementById('navbar');
       if (window.scrollY > 20) {
-        navbar.classList.add('bg-white/90', 'dark:bg-darkCard/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-gray-100', 'dark:border-gray-800');
-        navbar.classList.remove('bg-transparent', 'py-5');
-        navbar.classList.add('py-3');
+        navbar.classList.add('bg-bgLight/90', 'dark:bg-darkBg/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-stone-200/60', 'dark:border-stone-800', 'py-4');
+        navbar.classList.remove('bg-transparent', 'py-6');
       } else {
-        navbar.classList.remove('bg-white/90', 'dark:bg-darkCard/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-gray-100', 'dark:border-gray-800', 'py-3');
-        navbar.classList.add('bg-transparent', 'py-5');
+        navbar.classList.remove('bg-bgLight/90', 'dark:bg-darkBg/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-stone-200/60', 'dark:border-stone-800', 'py-4');
+        navbar.classList.add('bg-transparent', 'py-6');
       }
     });
 
-    // Subtitle Typing Animation
+    // Typing Animation
     const typingSubtitles = [
       "Environmental Geochemistry",
       "Managed Aquifer Recharge (MAR)",
@@ -982,7 +703,7 @@
     }
     typeLoop();
 
-    // Water Wave Canvas Animation
+    // Canvas Waves in Heritage Gold & Forest Tint
     const canvas = document.getElementById('waterCanvas');
     const ctx = canvas.getContext('2d');
     let step = 0;
@@ -995,14 +716,14 @@
     resizeCanvas();
 
     function renderWaves() {
-      step += 0.015;
+      step += 0.012;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       ctx.beginPath();
-      ctx.lineWidth = 1.5;
-      ctx.strokeStyle = 'rgba(32, 191, 234, 0.2)';
-      for (let x = 0; x <= canvas.width; x += 10) {
-        const y = Math.sin(x * 0.005 + step) * 20 + canvas.height * 0.5;
+      ctx.lineWidth = 1;
+      ctx.strokeStyle = 'rgba(194, 155, 56, 0.2)';
+      for (let x = 0; x <= canvas.width; x += 12) {
+        const y = Math.sin(x * 0.004 + step) * 22 + canvas.height * 0.48;
         if (x === 0) ctx.moveTo(x, y);
         else ctx.lineTo(x, y);
       }
@@ -1010,9 +731,9 @@
 
       ctx.beginPath();
       ctx.lineWidth = 1;
-      ctx.strokeStyle = 'rgba(0, 103, 184, 0.15)';
-      for (let x = 0; x <= canvas.width; x += 10) {
-        const y = Math.cos(x * 0.008 + step * 0.8) * 25 + canvas.height * 0.55;
+      ctx.strokeStyle = 'rgba(24, 78, 68, 0.15)';
+      for (let x = 0; x <= canvas.width; x += 12) {
+        const y = Math.cos(x * 0.006 + step * 0.7) * 26 + canvas.height * 0.52;
         if (x === 0) ctx.moveTo(x, y);
         else ctx.lineTo(x, y);
       }
@@ -1022,7 +743,7 @@
     }
     renderWaves();
 
-    // Publication Search & Filter
+    // Publication Filter
     const searchInput = document.getElementById('pubSearch');
     const filterBtns = document.querySelectorAll('.filter-btn');
     const pubCards = document.querySelectorAll('.pub-card');
@@ -1050,36 +771,15 @@
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         filterBtns.forEach(b => {
-          b.classList.remove('bg-primary', 'text-white');
-          b.classList.add('bg-gray-100', 'dark:bg-gray-800', 'text-gray-600', 'dark:text-gray-300');
+          b.classList.remove('bg-primary', 'text-stone-100');
+          b.classList.add('bg-stone-100', 'dark:bg-stone-800', 'text-stone-600', 'dark:text-stone-300');
         });
-        btn.classList.remove('bg-gray-100', 'dark:bg-gray-800', 'text-gray-600', 'dark:text-gray-300');
-        btn.classList.add('bg-primary', 'text-white');
+        btn.classList.remove('bg-stone-100', 'dark:bg-stone-800', 'text-stone-600', 'dark:text-stone-300');
+        btn.classList.add('bg-primary', 'text-stone-100');
 
         currentCat = btn.getAttribute('data-cat');
         filterPubs();
       });
-    });
-
-    // vCard Download
-    document.getElementById('downloadVCard')?.addEventListener('click', () => {
-      const vCardData = `BEGIN:VCARD
-VERSION:3.0
-FN:Dr. Aravinth Siva Subramaniam Ekamparam
-TITLE:Research Scientist
-EMAIL;TYPE=INTERNET,WORK:aravinthekamparam@gmail.com
-TEL;TYPE=WORK,VOICE:+918903656204
-URL:https://www.linkedin.com/in/aravinth-ekamparam/
-END:VCARD`;
-
-      const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8;' });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.setAttribute('download', 'Dr_Aravinth_Ekamparam.vcf');
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
     });
 
     // Contact Form Submit
